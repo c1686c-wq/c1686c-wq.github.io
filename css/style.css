@@ -155,6 +155,10 @@ body {
    GLASS NAV（核心）
 ========================= */
 .glass-nav {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    
     display: flex;
     gap: 22px;
     z-index: 1;
