@@ -8,18 +8,13 @@ body {
    HERO 首页封面
 ========================= */
 .hero {
-    height: 100vh;
+    height: 100vh;   /* ⭐ 全屏 */
     width: 100%;
     background-image: url("/bg.png");
     background-size: cover;
     background-position: center;
     position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
 /* 黑色遮罩层 */
 .overlay {
     background: rgba(0, 0, 0, 0.55);
