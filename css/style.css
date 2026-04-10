@@ -137,3 +137,73 @@ footer {
     padding: 20px;
     background: #eee;
 }
+
+
+
+/* =========================People========================= */
+
+ /* =========================
+   TOP NAV（右上角普通文字）
+========================= */
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 20px 40px;
+    font-size: 14px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+/* 分割线 */
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+
+/* 页面标题 */
+.page-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 36px;
+}
+
+/* =========================
+   PEOPLE GRID
+========================= */
+.people-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+/* 每个人卡片 */
+.person-card {
+    width: 160px;
+    text-align: center;
+}
+
+/* 照片方块 */
+.photo {
+    width: 160px;
+    height: 160px;
+    background: #e5e5e5;
+    border: 1px solid #ccc;
+}
+
+/* 名字 */
+.name {
+    margin-top: 10px;
+    font-size: 16px;
+}
