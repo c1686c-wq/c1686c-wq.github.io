@@ -133,6 +133,32 @@ footer {
     background: #eee;
 }
 
+/* =========================
+   HERO NAV（新增）
+========================= */
+.hero-nav {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* 链接样式（和 btn 一致风格） */
+.hero-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+
+    padding: 6px 2px;
+    transition: 0.2s ease;
+}
+
+/* hover：变粗 + 轻微上移 */
+.hero-nav a:hover {
+    font-weight: 700;
+    transform: translateY(-2px);
+}
 
 
 /* =========================People========================= */
