@@ -288,10 +288,12 @@ body {
     margin-top: 10px;
     font-size: 16px;
 }
+
+/* =========================Page cover========================= */
 /* =========================
-   PEOPLE COVER(核心）
+   PAGE COVER(核心）
 ========================= */
-.people-cover {
+.page-cover {
     height: 28vh;
     width: 100%;
     background-image: url("/bg.png");
@@ -307,7 +309,7 @@ body {
 }
 
 /* 暗层 */
-.people-cover::after {
+.page-cover::after {
     content: "";
     position: absolute;
     top: 0;
@@ -318,7 +320,7 @@ body {
 }
 
 /* 标题 */
-.people-cover .cover-title {
+.page-cover .cover-title {
     color: white;
     font-size: 48px;
     z-index: 1;
