@@ -55,16 +55,16 @@ body {
 
 .logo {
     width: 45px;
-    height: 45px;
+    height: 55px;
 }
 
 .line1 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .line2 {
-    font-size: 13px;
+    font-size: 15px;
     opacity: 0.85;
 }
 
