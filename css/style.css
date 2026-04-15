@@ -19,13 +19,7 @@ body {
 }
 
 /* 黑色遮罩 */
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.0);
-}
-
+.hero::after { background: transparent; }
 
 /* =========================
    OVERLAY（关键修复）
