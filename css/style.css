@@ -105,8 +105,8 @@ body {
 }
 
 .hero-center h1 {
-    font-size: 48px;
-    letter-spacing: 1px;
+    white-space: nowrap;
+    font-size: clamp(24px, 4vw, 48px);
 }
 
 .hero-center p {
