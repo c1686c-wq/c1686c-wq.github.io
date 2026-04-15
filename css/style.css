@@ -190,13 +190,15 @@ body {
     color: #333;
 }
 
-/* ===== HERO（封面） ===== */
+/* ===== HERO ===== */
 .team-hero {
     height: 40vh;
 
-    background-image: url("../bg.png"); /* ⭐确保是 bg.png */
+    /* ⭐ 修复：路径 */
+    background-image: url("../bg.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
     position: relative;
 
@@ -205,6 +207,14 @@ body {
     align-items: center;
 }
 
+/* ===== 黑色遮罩（增强可读性） ===== */
+.team-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
 
 /* ===== HERO文字 ===== */
 .team-hero-text {
@@ -213,27 +223,22 @@ body {
     z-index: 2;
 }
 
-.team-hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-/* ===== NAVBAR（右上角） ===== */
+/* ===== NAVBAR（修复版） ===== */
 .navbar {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
 
     padding: 20px 40px;
 
-    display: flex;
-    justify-content: flex-end;   /* ⭐ 靠右 */
-
-    z-index: 10;
+    z-index: 3;   /* ⭐关键：在遮罩上面 */
 }
 
-/* 导航按钮 */
+/* 导航 */
 .nav-right {
     display: flex;
     gap: 25px;
@@ -246,7 +251,7 @@ body {
     position: relative;
 }
 
-/* ⭐ hover 动画（高级感） */
+/* hover */
 .nav-right a::after {
     content: "";
     position: absolute;
@@ -282,7 +287,7 @@ body {
     gap: 30px;
 }
 
-/* ===== MEMBER CARD ===== */
+/* ===== CARD ===== */
 .member {
     display: flex;
     flex-direction: column;
@@ -292,70 +297,21 @@ body {
     border-radius: 16px;
     background: white;
 
-    transition: 0.3s;
     box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+    transition: 0.3s;
 }
 
 .member:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
 /* 头像 */
 .member img {
     width: 140px;
     height: 140px;
-
-    object-fit: cover;     /* ⭐ 不变形 */
-    border-radius: 50%;    /* ⭐ 圆形 */
-
-    margin-bottom: 15px;
-
-    background: #eee;      /* ⭐ 没图时占位 */
-}
-
-/* 名字 */
-.member h3 {
-    margin: 10px 0 5px;
-}
-
-/* 描述 */
-.member p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* ===== MODAL（如果以后用） ===== */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 999;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    width: 400px;
-    text-align: center;
-    position: relative;
-}
-
-.modal-content img {
-    width: 120px;
+    object-fit: cover;
     border-radius: 50%;
     margin-bottom: 15px;
 }
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    cursor: pointer;
 }
