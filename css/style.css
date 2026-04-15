@@ -1,27 +1,27 @@
 /* =========================
-   GLOBAL RESET
+   GLOBAL
 ========================= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
-    background: #fff;
 }
 
 /* =========================
-   HERO（首页封面）
+   HERO（背景关键修复）
 ========================= */
 .hero {
     height: 100vh;
     width: 100%;
 
-    background-image: url("bg.jpeg");
+    background-image: url("bg.jpeg"); /* ⚠️ 确认文件名 */
     background-size: cover;
     background-position: center;
 
     position: relative;
 }
-/* 遮罩 */
+
+/* 黑色遮罩 */
 .hero::after {
     content: "";
     position: absolute;
@@ -30,36 +30,93 @@ body {
 }
 
 /* =========================
-   HERO 内容层
+   OVERLAY（关键修复）
 ========================= */
 .overlay {
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 2;
+}
 
-    width: 100%;
-    height: 100%;
+/* =========================
+   左上角
+========================= */
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 30px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 12px;
 
     color: white;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+
+.line1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.line2 {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* =========================
+   右上角导航
+========================= */
+.top-right {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+
+    display: flex;
+    gap: 22px;
+}
+
+.top-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.top-right a:hover {
+    font-weight: 700;
+}
+
+/* =========================
+   HERO 中心文字（关键）
+========================= */
+.hero-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     text-align: center;
+    color: white;
 }
 
-.overlay h1 {
-    font-size: 60px;
+.hero-center h1 {
+    font-size: 48px;
     margin-bottom: 10px;
-    letter-spacing: 2px;
 }
 
-.overlay p {
-    font-size: 20px;
+.hero-center p {
+    font-size: 18px;
     opacity: 0.9;
-    margin-bottom: 25px;
 }
 
+/* =========================
+   下箭头（关键修复）
+========================= */
 .scroll-down {
     position: absolute;
     bottom: 25px;
@@ -73,185 +130,35 @@ body {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(10px); }
-}
-/* =========================
-   HERO NAV（首页导航）
-========================= */
-.hero-nav {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.hero-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.2s;
-}
-
-.hero-nav a:hover {
-    font-weight: 700;
-    transform: translateY(-2px);
+    0%,100% { transform: translate(-50%,0); }
+    50% { transform: translate(-50%,10px); }
 }
 
 /* =========================
-   SECTION（正文）
+   CONTENT
 ========================= */
-.section {
+.content {
     padding: 60px 20px;
     max-width: 1000px;
     margin: auto;
 }
 
-.section.light {
-    background: #f7f7f7;
+.home-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 /* =========================
-   CARDS（通用模块）
+   CARDS
 ========================= */
 .cards {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
 }
 
 .card {
     flex: 1;
-    min-width: 200px;
-    background: white;
     padding: 20px;
     border: 1px solid #ddd;
-}
-
-/* =========================
-   PUBLICATIONS
-========================= */
-.pub-list {
-    margin-top: 20px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #eee;
-}
-
-/* =======================================================
-   PAGE COVER（所有子页面统一：People / Team / etc）
-======================================================= */
-.page-cover {
-    height: 28vh;
-    width: 100%;
-    background-image: url("bg.jpeg");
-    background-size: cover;
-    background-position: center;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 遮罩 */
-.page-cover::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.35);
-}
-
-/* 标题 */
-.page-cover .cover-title {
-    position: relative;
-    z-index: 2;
-
-    color: white;
-    font-size: 48px;
-}
-
-/* =========================
-   GLASS NAV（右上角子页面导航）
-========================= */
-.glass-nav {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-
-    display: flex;
-    gap: 22px;
-
-    padding: 10px 16px;
-    border-radius: 10px;
-
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(10px);
-
-    z-index: 3;
-}
-
-.glass-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.glass-nav a:hover {
-    font-weight: 600;
-}
-
-/* =========================
-   PEOPLE GRID
-========================= */
-.people-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-
-    margin: 30px auto 60px;
-    max-width: 1000px;
-}
-
-.person-card {
-    width: 160px;
-    text-align: center;
-}
-
-.photo {
-    width: 160px;
-    height: 160px;
-    background: #e5e5e5;
-    border: 1px solid #ccc;
-}
-
-.name {
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-/* =========================
-   PI CENTER
-========================= */
-.pi-center {
-    display: flex;
-    justify-content: center;
-}
-
-/* =========================
-   SECTION TITLE
-========================= */
-.section-title {
-    text-align: center;
-    margin: 40px 0 20px;
-    font-size: 24px;
 }
