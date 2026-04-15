@@ -192,11 +192,11 @@ body {
 
 /* ===== HERO（封面） ===== */
 .team-hero {
-    height: 35vh;
+    height: 40vh;
 
-    /* ⭐ 背景图（路径最容易错） */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url("../images/bg.png") center/cover no-repeat;
+    background-image: url("../bg.png"); /* ⭐确保是 bg.png */
+    background-size: cover;
+    background-position: center;
 
     position: relative;
 
@@ -204,6 +204,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 /* ===== HERO文字 ===== */
 .team-hero-text {
