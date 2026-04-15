@@ -10,7 +10,7 @@ body {
 .hero {
     height: 100vh;   /* ⭐ 全屏 */
     width: 100%;
-    background-image: url("/bg.png");
+    background-image: url("/bg.jpeg");
     background-size: cover;
     background-position: center;
     position: relative;
