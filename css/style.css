@@ -1,60 +1,181 @@
-/* 全屏背景 */
+/* =========================
+   GLOBAL
+========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* =========================
+   HERO（背景关键修复）
+========================= */
 .hero {
+    width: 100%;
     height: 100vh;
-    width: 100%;
-    background-image: url("bg.png");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: url("../bg.png") center/cover no-repeat;
     position: relative;
+    overflow: hidden;
 }
-/* 黑色遮罩，让文字清晰 */
+
+/* 黑色遮罩 */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+/* =========================
+   OVERLAY（关键修复）
+========================= */
 .overlay {
-    background: rgba(0, 0, 0, 0.55);
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+/* =========================
+   左上角
+========================= */
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+}
+
+.logo {
+    width: 45px;
+    height: 55px;
+}
+
+.line1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.line2 {
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+/* =========================
+   右上角导航
+========================= */
+.top-right {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+
+    display: flex;
+    gap: 22px;
+}
+
+.top-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.top-right a:hover {
+    font-weight: 700;
+}
+
+/* =========================
+   HERO 中心文字（关键）
+========================= */
+.hero-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    color: white;
+}
+
+.hero-center h1 {
+    white-space: nowrap;
+    font-size: clamp(24px, 4vw, 48px);
+}
+
+.hero-center p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* =========================
+   下箭头（关键修复）
+========================= */
+.scroll-down {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    animation: pulse 1.5s infinite;
+}
+
+.arrow {
     color: white;
-    text-align: center;
-}
-
-/* 标题 */
-.overlay h1 {
-    font-size: 60px;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-/* 副标题 */
-.overlay p {
     font-size: 20px;
-    opacity: 0.9;
+    animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+@keyframes pulse {
+    0%,100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* =========================
+   CONTENT
+========================= */
+.content {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.home-img {
+    width: 100%;
+    border-radius: 10px;
     margin-bottom: 40px;
 }
 
-/* 按钮区域 */
-.nav-buttons {
+/* =========================
+   CARDS
+========================= */
+.cards {
     display: flex;
     gap: 20px;
 }
 
-/* 按钮样式 */
-.btn {
-    padding: 12px 24px;
-    border: 1px solid white;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-/* hover效果 */
-.btn:hover {
-    background: white;
-    color: black;
-}
+.card {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+} 
