@@ -1,0 +1,133 @@
+/* ===========================================team========================================== */
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* ===== HERO ===== */
+.team-hero {
+    height: 40vh;
+
+    /* ⭐ 修复：路径 */
+    background-image: url("../bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== 黑色遮罩（增强可读性） ===== */
+.team-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+/* ===== HERO文字 ===== */
+.team-hero-text {
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+/* ===== NAVBAR（修复版） ===== */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 20px 40px;
+
+    z-index: 3;   /* ⭐关键：在遮罩上面 */
+}
+
+/* 导航 */
+.nav-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+
+/* hover */
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.nav-right a:hover::after {
+    width: 100%;
+}
+
+/* ===== CONTENT ===== */
+.team-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.team-container h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* ===== GRID ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* ===== CARD ===== */
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 25px;
+    border-radius: 16px;
+    background: white;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+    transition: 0.3s;
+}
+
+.member:hover {
+    transform: translateY(-8px);
+}
+
+/* 头像 */
+.member img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+}
