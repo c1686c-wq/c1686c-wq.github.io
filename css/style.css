@@ -180,15 +180,44 @@ body {
     border: 1px solid #ddd;
 } 
 
-.team-hero {
-    height: 33vh;   /* ⭐ 1/3屏 */
-    background: url("../bg.png") center/cover no-repeat;
-    position: relative;
-}
 
 
 /* ===========================================team========================================== */
-/* ===== NAVBAR（最终版） ===== */
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* ===== HERO（封面） ===== */
+.team-hero {
+    height: 35vh;
+
+    /* ⭐ 背景图（路径最容易错） */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("../images/bg.png") center/cover no-repeat;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== HERO文字 ===== */
+.team-hero-text {
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.team-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* ===== NAVBAR（右上角） ===== */
 .navbar {
     position: absolute;
     top: 0;
@@ -198,18 +227,17 @@ body {
     padding: 20px 40px;
 
     display: flex;
-    justify-content: flex-end;   /* ⭐ 全部靠右 */
+    justify-content: flex-end;   /* ⭐ 靠右 */
 
     z-index: 10;
 }
 
-/* 右侧按钮组 */
+/* 导航按钮 */
 .nav-right {
     display: flex;
     gap: 25px;
 }
 
-/* 按钮样式 */
 .nav-right a {
     color: white;
     text-decoration: none;
@@ -217,7 +245,7 @@ body {
     position: relative;
 }
 
-/* ⭐ 高级 hover 动画（推荐保留） */
+/* ⭐ hover 动画（高级感） */
 .nav-right a::after {
     content: "";
     position: absolute;
@@ -232,6 +260,101 @@ body {
 .nav-right a:hover::after {
     width: 100%;
 }
-.nav-right a:hover {
-    font-weight: 700;
+
+/* ===== CONTENT ===== */
+.team-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.team-container h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* ===== GRID ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* ===== MEMBER CARD ===== */
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 25px;
+    border-radius: 16px;
+    background: white;
+
+    transition: 0.3s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* 头像 */
+.member img {
+    width: 140px;
+    height: 140px;
+
+    object-fit: cover;     /* ⭐ 不变形 */
+    border-radius: 50%;    /* ⭐ 圆形 */
+
+    margin-bottom: 15px;
+
+    background: #eee;      /* ⭐ 没图时占位 */
+}
+
+/* 名字 */
+.member h3 {
+    margin: 10px 0 5px;
+}
+
+/* 描述 */
+.member p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===== MODAL（如果以后用） ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
 }
