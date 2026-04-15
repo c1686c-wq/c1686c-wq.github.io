@@ -188,25 +188,35 @@ body {
 
 
 /* =========================team========================= */
-/* 黑色遮罩（可选） */
-.team-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
-/* 文字居中 */
-.team-hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* ===== HERO ===== */
+.team-hero {
+    height: 35vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("../images/bg.png") center/cover no-repeat;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-hero-text {
     color: white;
     text-align: center;
-    z-index: 2;
 }
+
+.team-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* ===== CONTENT ===== */
 .team-container {
     max-width: 1100px;
     margin: auto;
@@ -217,44 +227,79 @@ body {
     margin-top: 50px;
     margin-bottom: 20px;
 }
+
+/* ===== GRID ===== */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
+
+/* ===== MEMBER CARD ===== */
 .member {
     text-align: center;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 16px;
+    background: white;
+    cursor: pointer;
     transition: 0.3s;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
 .member:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
-/* 头像 */
 .member img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
-    border-radius: 50%;   /* ⭐ 圆形头像 */
+    border-radius: 50%;
     margin-bottom: 15px;
-    aspect-ratio: 1 / 1; /* ⭐ 防止脸变形 */
 }
 
-/* 名字 */
 .member h3 {
     margin: 10px 0 5px;
 }
 
-/* 描述 */
 .member p {
     font-size: 14px;
     color: #666;
 }
-.member {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
 }
