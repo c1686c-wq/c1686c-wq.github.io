@@ -218,14 +218,14 @@ body {
 
 /* ===== CONTENT ===== */
 .team-container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
     padding: 60px 20px;
+    text-align: center;
 }
 
 .team-container h2 {
-    margin-top: 50px;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* ===== GRID ===== */
@@ -237,13 +237,15 @@ body {
 
 /* ===== MEMBER CARD ===== */
 .member {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     padding: 25px;
     border-radius: 16px;
     background: white;
-    cursor: pointer;
-    transition: 0.3s;
 
+    transition: 0.3s;
     box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
@@ -253,18 +255,23 @@ body {
 }
 
 .member img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+
+    object-fit: cover;     /* ⭐ 防止拉伸 */
+    border-radius: 50%;    /* 圆形 */
+
     margin-bottom: 15px;
+
+    background: #eee;      /* ⭐ 没图时占位 */
 }
 
 .member h3 {
-    margin: 10px 0 5px;
+    text-align: center;
 }
 
 .member p {
+    text-align: center;
     font-size: 14px;
     color: #666;
 }
