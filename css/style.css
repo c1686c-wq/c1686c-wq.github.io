@@ -22,6 +22,14 @@ body {
     position: relative;
 }
 
+/* 黑色遮罩 */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
 
 /* =========================
    OVERLAY（关键修复）
