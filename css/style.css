@@ -1,23 +1,40 @@
+/* =========================
+   GLOBAL RESET
+========================= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
+    background: #fff;
 }
 
 /* =========================
-   HERO 首页封面
+   HERO（首页封面）
 ========================= */
 .hero {
-    height: 100vh;   /* ⭐ 全屏 */
+    height: 100vh;
     width: 100%;
-    background-image: url("/bg.jpeg");
+    background-image: url("bg.jpeg");
     background-size: cover;
     background-position: center;
     position: relative;
 }
-/* 黑色遮罩层 */
+
+/* 遮罩 */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+/* =========================
+   HERO 内容层
+========================= */
 .overlay {
-    background: rgba(0, 0, 0, 0.55);
+    position: relative;
+    z-index: 2;
+
     width: 100%;
     height: 100%;
 
@@ -30,88 +47,66 @@ body {
     text-align: center;
 }
 
-/* 标题 */
 .overlay h1 {
     font-size: 60px;
-    letter-spacing: 3px;
     margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
-/* 副标题 */
 .overlay p {
     font-size: 20px;
     opacity: 0.9;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* =========================
-   NAV BUTTONS（核心升级）
+   HERO NAV（首页导航）
 ========================= */
-.nav-buttons {
+.hero-nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+    gap: 25px;
     justify-content: center;
-    margin-top: 10px;
+    flex-wrap: wrap;
 }
 
-/* ⭐ MIT / Nature 玻璃按钮 */
-.btn {
-    padding: 12px 26px;
+.hero-nav a {
     color: white;
     text-decoration: none;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-
-    border: none;
-    border-radius: 6px;
-
-    background: rgba(255, 255, 255, 0.10);
-    backdrop-filter: blur(10px);
-
-    display: inline-block;
-
-    transition: all 0.25s ease;
+    font-size: 18px;
+    transition: 0.2s;
 }
 
-/* hover 发光 */
-.btn:hover {
-    background: rgba(255, 255, 255, 0.22);
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.35);
+.hero-nav a:hover {
+    font-weight: 700;
     transform: translateY(-2px);
 }
 
-/* 点击效果 */
-.btn:active {
-    transform: translateY(0px);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-}
-
 /* =========================
-   SECTIONS
+   SECTION（正文）
 ========================= */
 .section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     max-width: 1000px;
     margin: auto;
 }
 
-/* 可选浅色背景区块 */
 .section.light {
     background: #f7f7f7;
 }
 
 /* =========================
-   CARDS（research / people）
+   CARDS（通用模块）
 ========================= */
 .cards {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
 .card {
     flex: 1;
+    min-width: 200px;
     background: white;
     padding: 20px;
     border: 1px solid #ddd;
@@ -133,128 +128,68 @@ footer {
     background: #eee;
 }
 
-/* =========================
-   HERO NAV（新增）
-========================= */
-.hero-nav {
+/* =======================================================
+   PAGE COVER（所有子页面统一：People / Team / etc）
+======================================================= */
+.page-cover {
+    height: 28vh;
+    width: 100%;
+    background-image: url("bg.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
     display: flex;
-    gap: 25px;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
 }
 
-/* 链接样式（和 btn 一致风格） */
-.hero-nav a {
+/* 遮罩 */
+.page-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+}
+
+/* 标题 */
+.page-cover .cover-title {
+    position: relative;
+    z-index: 2;
+
     color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 400;
-
-    padding: 6px 2px;
-    transition: 0.2s ease;
-}
-
-/* hover：变粗 + 轻微上移 */
-.hero-nav a:hover {
-    font-weight: 700;
-    transform: translateY(-2px);
-}
-
-
-/* =========================People========================= */
-
-/* =========================
-   PAGE RESET（防白边）
-========================= */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff;
+    font-size: 48px;
 }
 
 /* =========================
-   GLASS NAV（核心）
+   GLASS NAV（右上角子页面导航）
 ========================= */
 .glass-nav {
     position: absolute;
     top: 20px;
     right: 40px;
-    
+
     display: flex;
     gap: 22px;
-    z-index: 1;
 
-    padding: 10px 18px;
+    padding: 10px 16px;
     border-radius: 10px;
 
     background: rgba(255,255,255,0.12);
     backdrop-filter: blur(10px);
+
+    z-index: 3;
 }
 
-/* 玻璃按钮文字 */
 .glass-nav a {
     color: white;
     text-decoration: none;
     font-size: 15px;
-    transition: 0.2s;
 }
 
-/* hover：轻微加粗 */
 .glass-nav a:hover {
     font-weight: 600;
-}
-
-/* =========================
-   COVER（Notion风格）
-========================= */
-.cover {
-    height: 30vh;
-    width: 100%;
-    background-image: url("/bg.png");
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-}
-
-/* 暗层让字清晰 */
-.cover::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.35);
-}
-
-.cover-title {
-    position: relative;
-    color: white;
-    font-size: 48px;
-    letter-spacing: 2px;
-    z-index: 1;
-}
-
-/* =========================
-   SECTION TITLE
-========================= */
-.section-title {
-    text-align: center;
-    margin: 40px 0 20px;
-    font-size: 24px;
-}
-
-/* =========================
-   PI 居中
-========================= */
-.pi-center {
-    display: flex;
-    justify-content: center;
 }
 
 /* =========================
@@ -265,13 +200,11 @@ body {
     flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
-    margin: 20px auto 60px;
+
+    margin: 30px auto 60px;
     max-width: 1000px;
 }
 
-/* =========================
-   PERSON CARD
-========================= */
 .person-card {
     width: 160px;
     text-align: center;
@@ -289,41 +222,19 @@ body {
     font-size: 16px;
 }
 
-/* =========================Page cover========================= */
 /* =========================
-   PAGE COVER(核心）
+   PI CENTER
 ========================= */
-.page-cover {
-    height: 28vh;
-    width: 100%;
-    background-image: url("/bg.png");
-    background-size: cover;
-    background-position: center;
-
+.pi-center {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-
-    position: relative;
 }
 
-/* 暗层 */
-.page-cover::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.35);
+/* =========================
+   SECTION TITLE
+========================= */
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 24px;
 }
-
-/* 标题 */
-.page-cover .cover-title {
-    color: white;
-    font-size: 48px;
-    z-index: 1;
-    margin-bottom: 15px;
-}
-
