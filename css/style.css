@@ -188,158 +188,50 @@ body {
 
 
 /* ===========================================team========================================== */
-/* ===== GLOBAL ===== */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-/* ===== HERO ===== */
-.team-hero {
-    height: 35vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url("../bg.png") center/cover no-repeat;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.team-hero-text {
-    color: white;
-    text-align: center;
-}
-
-.team-hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-/* ===== CONTENT ===== */
-.team-container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.team-container h2 {
-    text-align: center;
-}
-
-/* ===== GRID ===== */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-}
-
-/* ===== MEMBER CARD ===== */
-.member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 25px;
-    border-radius: 16px;
-    background: white;
-
-    transition: 0.3s;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-}
-
-.member:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-
-.member img {
-    width: 140px;
-    height: 140px;
-
-    object-fit: cover;     /* ⭐ 防止拉伸 */
-    border-radius: 50%;    /* 圆形 */
-
-    margin-bottom: 15px;
-
-    background: #eee;      /* ⭐ 没图时占位 */
-}
-
-.member h3 {
-    text-align: center;
-}
-
-.member p {
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-}
-
-/* ===== MODAL ===== */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 999;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    width: 400px;
-    text-align: center;
-    position: relative;
-}
-
-.modal-content img {
-    width: 120px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    cursor: pointer;
-}
-/* ===== NAVBAR ===== */
+/* ===== NAVBAR（最终版） ===== */
 .navbar {
     position: absolute;
     top: 0;
+    right: 0;
     width: 100%;
+
     padding: 20px 40px;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;   /* ⭐ 全部靠右 */
 
     z-index: 10;
 }
 
-.nav-left {
-    color: white;
-    font-weight: bold;
-}
-
+/* 右侧按钮组 */
 .nav-right {
     display: flex;
     gap: 25px;
 }
 
+/* 按钮样式 */
 .nav-right a {
     color: white;
     text-decoration: none;
     font-size: 15px;
+    position: relative;
 }
 
+/* ⭐ 高级 hover 动画（推荐保留） */
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.nav-right a:hover::after {
+    width: 100%;
+}
 .nav-right a:hover {
     font-weight: 700;
 }
