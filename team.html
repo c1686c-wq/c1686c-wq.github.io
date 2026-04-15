@@ -8,57 +8,108 @@
     <a href="index.html">Home</a>
 </nav>
 
-<!-- ====== 顶部封面 ====== -->
+<!-- ===== HERO ===== -->
 <div class="team-hero">
     <div class="team-hero-text">
         <h1>Our Team</h1>
-        <p>Meet the people behind the research</p>
+        <p>Exploring aging, metabolism, and spatial biology</p>
     </div>
 </div>
 
-<!-- ====== 内容区域 ====== -->
+<!-- ===== CONTENT ===== -->
 <div class="team-container">
 
-    <!-- ====== Prof ====== -->
+    <!-- PI -->
     <h2>Principal Investigator</h2>
     <div class="team-grid">
 
-        <div class="member">
+        <div class="member" onclick="openModal('wu')">
             <img src="images/prof.jpg">
             <h3>Prof. Wu</h3>
-            <p>Lab head, focusing on aging biology and metabolism.</p>
+            <p>Lab Head</p>
         </div>
 
     </div>
 
-    <!-- ====== Students ====== -->
+    <!-- Students -->
     <h2>Students</h2>
     <div class="team-grid">
 
-        <div class="member">
+        <div class="member" onclick="openModal('alice')">
             <img src="images/student1.jpg">
             <h3>Alice</h3>
-            <p>PhD student working on ROS signaling.</p>
+            <p>PhD Student</p>
         </div>
 
-        <div class="member">
+        <div class="member" onclick="openModal('bob')">
             <img src="images/student2.jpg">
             <h3>Bob</h3>
-            <p>Master student studying lipid metabolism.</p>
+            <p>Master Student</p>
         </div>
 
     </div>
 
-    <!-- ====== Staff ====== -->
+    <!-- Staff -->
     <h2>Staff</h2>
     <div class="team-grid">
 
-        <div class="member">
-            <img src="images/staff1.jpg">
+        <div class="member" onclick="openModal('staff1')">
+            <img src="images/student2.jpg">
             <h3>Technician Li</h3>
-            <p>Lab management and support.</p>
+            <p>Lab Support</p>
         </div>
 
     </div>
 
 </div>
+
+<!-- ===== MODAL ===== -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img">
+        <h2 id="modal-name"></h2>
+        <p id="modal-desc"></p>
+    </div>
+</div>
+
+<!-- ===== JS ===== -->
+<script>
+const data = {
+    wu: {
+        name: "Prof. Wu",
+        img: "images/prof.jpg",
+        desc: "Principal Investigator. Focus on aging biology and metabolism."
+    },
+    alice: {
+        name: "Alice",
+        img: "images/student1.jpg",
+        desc: "PhD student studying ROS signaling."
+    },
+    bob: {
+        name: "Bob",
+        img: "images/student2.jpg",
+        desc: "Master student working on lipid metabolism."
+    },
+    staff1: {
+        name: "Technician Li",
+        img: "images/student2.jpg",
+        desc: "Responsible for lab management and support."
+    }
+};
+
+function openModal(id) {
+    const m = data[id];
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modal-img").src = m.img;
+    document.getElementById("modal-name").innerText = m.name;
+    document.getElementById("modal-desc").innerText = m.desc;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
