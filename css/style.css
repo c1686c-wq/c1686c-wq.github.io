@@ -122,16 +122,35 @@ body {
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
+}
 
+.circle {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: pulse 1.5s infinite;
+}
+
+.arrow {
     color: white;
-    font-size: 28px;
-
-    animation: bounce 1.5s infinite;
+    font-size: 20px;
+    animation: bounce 1.2s infinite;
 }
 
 @keyframes bounce {
-    0%,100% { transform: translate(-50%,0); }
-    50% { transform: translate(-50%,10px); }
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+@keyframes pulse {
+    0%,100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
 }
 
 /* =========================
