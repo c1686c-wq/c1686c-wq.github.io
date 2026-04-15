@@ -14,7 +14,7 @@ body {
     height: 100vh;
     width: 100%;
 
-    background-image: url("bg.jpeg"); /* ⚠️ 确认文件名 */
+    background-image: url("./bg.jpeg"); /* ⚠️ 确认文件名 */
     background-size: cover;
     background-position: center;
 
