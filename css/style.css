@@ -11,14 +11,7 @@ body {
    HERO（背景关键修复）
 ========================= */
 .hero {
-    height: 100vh;
-    width: 100%;
-
-    background-image: url("./bg.jpeg"); /* ⚠️ 确认文件名 */
-    background-size: cover;
-    background-position: center;
-
-    position: relative;
+    background: red;
 }
 
 /* 黑色遮罩 */
