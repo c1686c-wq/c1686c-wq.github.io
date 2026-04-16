@@ -53,7 +53,7 @@ body {
 }
 
 .logo {
-    width: 60px;
+    width: 48px;
     height: auto;
 }
 
@@ -63,13 +63,13 @@ body {
     gap: 6px;   /* ⭐ 两行间距 */
 }
 .line1 {
-    font-size: 26px;
+    font-size: 23px;
     font-weight: 700;
     color: var(--title);
 }
 
 .line2 {
-    font-size: 20px;
+    font-size: 19px;
     color: var(--quote);
 }
 
@@ -114,21 +114,13 @@ body {
 .hero-center p {
     color: var(--quote);
     font-size: 20px;
-    margin-top: 12px;
+    margin-top: 6px;
 }
 
 /* 高亮文字 */
 .highlight {
     color: var(--accent);
     font-style: italic;
-}
-
-/* divider */
-.divider {
-    width: 70px;
-    height: 2px;
-    background: var(--accent);
-    margin: 18px auto;
 }
 
 /* ================= SCROLL ================= */
