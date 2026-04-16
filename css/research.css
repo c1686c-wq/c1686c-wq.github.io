@@ -1,0 +1,79 @@
+/* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.research-hero {
+    height: 35vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url("../images/bg.png") center/cover no-repeat;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-right {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ===== HERO TEXT ===== */
+.hero-text {
+    color: white;
+    text-align: center;
+}
+
+/* ===== CONTENT ===== */
+.research-container {
+    max-width: 850px;
+    margin: auto;
+    padding: 70px 20px;
+    line-height: 1.8;
+}
+
+/* 大标题 */
+.research-container h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* 正文 */
+.research-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+/* 加粗部分 */
+.research-container strong {
+    color: #111;
+}
