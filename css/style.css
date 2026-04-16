@@ -23,13 +23,15 @@ body {
     height: 100vh;
     background: url("../bg.png") center/cover no-repeat;
     position: relative;
+    filter: saturate(0.9) contrast(0.95);
 }
 
 /* soft overlay（不是黑色，是科研风） */
 .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(240,242,245,0.65);
+    background: linear-gradient(
+        rgba(240,242,245,0.65),
+        rgba(240,242,245,0.85)
+    );
 }
 
 /* ================= NAVBAR ================= */
@@ -90,13 +92,22 @@ body {
     padding: 80px 20px;
 }
 
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 /* ⭐ 关键：确保图片一定显示 */
 .home-img {
-    width: 100%;
-    display: block;          /* 防止inline空隙 */
-    border-radius: 12px;
-    margin-bottom: 40px;
+    display: block;
+    margin: 40px auto;     /* ⭐ 居中关键 */
+    
+    width: 100%;           /* 自适应 */
+    max-width: 900px;      /* ⭐ 限制最大宽度（关键） */
 
+    height: auto;          /* 保持比例 */
+
+    border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 
