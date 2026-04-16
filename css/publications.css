@@ -13,13 +13,27 @@ body {
 /* ===== HERO ===== */
 .publications-hero {
     height: 35vh;
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                url("../bg.png") center/cover no-repeat;
+
+    background: url("../bg.png") center/cover no-repeat;
     position: relative;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* ⭐ 轻灰 + 透明感 + 不压图 */
+.publications-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(240,242,245,0.35);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    z-index: 1;
 }
 
 /* ===== NAVBAR ===== */
