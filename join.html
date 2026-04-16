@@ -33,12 +33,11 @@
 <!-- ===== CONTENT ===== -->
 <div class="join-container">
 
-    <!-- 左边地图 -->
-    <div class="join-left">
-        <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=118.9105%2C32.1108%2C118.9135%2C32.1135&layer=mapnik&marker=32.1120%2C118.9120"">
-        </iframe>
-    </div>
+       <!-- 左：地图 -->
+        <div class="join-left">
+            <div id="map"></div>
+        </div>
+
 
     <!-- 中间竖线 -->
     <div class="vertical-line"></div>
@@ -74,6 +73,20 @@
     </div>
 
 </div>
+
+<!-- ===== Leaflet map script ===== -->
+<script>
+var map = L.map('map').setView([32.1120, 118.9120], 16);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap'
+}).addTo(map);
+
+L.marker([32.1120, 118.9120])
+ .addTo(map)
+ .bindPopup('NJU Basic Science Building')
+ .openPopup();
+</script>
 
 </body>
 </html>
