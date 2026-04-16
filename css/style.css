@@ -14,7 +14,7 @@
 body {
     margin: 0;
     background: #ffffff;
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: Arial, sans-serif;
     color: var(--title);
 }
 
