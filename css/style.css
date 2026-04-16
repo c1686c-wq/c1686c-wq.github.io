@@ -36,25 +36,25 @@ body {
         rgba(240,242,245,0.82)
     );
 
-    backdrop-filter: blur(0.8px);
-    -webkit-backdrop-filter: blur(0.8px);
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
 }
 
 /* ================= 左上角 ================= */
 .top-left {
     position: absolute;
-    top: 24px;
-    left: 34px;
+    top: 28px;
+    left: 38px;
+    gap: 18px;
 
     display: flex;
     align-items: center;
-    gap: 14px;
 
     z-index: 3;
 }
 
 .logo {
-    width: 48px;
+    width: 64px;
     height: auto;
 }
 
@@ -64,13 +64,13 @@ body {
 }
 
 .line1 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     color: var(--title);
 }
 
 .line2 {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--quote);
 }
 
@@ -108,10 +108,8 @@ body {
 }
 
 .hero-center h1 {
-    font-size: 46px;
-    color: var(--title);
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-size: clamp(34px, 4vw, 58px);
+    white-space: nowrap;
 }
 
 .hero-center p {
