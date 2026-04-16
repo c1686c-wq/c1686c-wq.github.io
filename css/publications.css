@@ -11,7 +11,7 @@ body {
 }
 
 /* ===== HERO ===== */
-.research-hero {
+.publications-hero {
     height: 35vh;
     background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
                 url("../bg.png") center/cover no-repeat;
@@ -51,7 +51,7 @@ body {
 }
 
 /* ===== CONTENT ===== */
-.research-container {
+.publications-container {
     max-width: 900px;
     margin: auto;
     padding: 70px 20px;
