@@ -17,6 +17,19 @@ body {
     color: var(--title);
 }
 
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(240,242,245,0.62),
+        rgba(240,242,245,0.82)
+    );
+
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+}
+
 /* ===== HERO ===== */
 .team-hero {
     width: 100%;
