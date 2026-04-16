@@ -36,8 +36,8 @@ body {
         rgba(240,242,245,0.82)
     );
 
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(0.8px);
+    -webkit-backdrop-filter: blur(0.8px);
 }
 
 /* ================= 左上角 ================= */
@@ -175,7 +175,7 @@ body {
 .home-img {
     display: block;
     width: 100%;
-    max-width: 860px;
+    max-width: 1050px;
     height: auto;
 
     margin: 20px auto 50px;
