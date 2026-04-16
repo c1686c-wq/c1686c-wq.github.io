@@ -40,8 +40,8 @@ body {
     background: rgba(240,242,245,0.35);
 
     /* ⭐轻微模糊（不要太重） */
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px)
+    -webkit-backdrop-filter: blur(1px);
 
     z-index: 1;
 }
