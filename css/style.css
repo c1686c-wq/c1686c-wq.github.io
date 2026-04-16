@@ -13,9 +13,9 @@
 
 body {
     margin: 0;
-    background: var(--bg);
+    background: #ffffff;   /* ⭐ 关键：全局白色 */
     font-family: "Georgia", "Times New Roman", serif;
-    color: var(--title);
+    color: #3E3A35;
 }
 
 /* ================= HERO ================= */
@@ -28,9 +28,12 @@ body {
 
 /* soft overlay（不是黑色，是科研风） */
 .overlay {
+    position: absolute;
+    inset: 0;
+
     background: linear-gradient(
-        rgba(240,242,245,0.65),
-        rgba(240,242,245,0.85)
+        rgba(240,242,245,0.45),
+        rgba(240,242,245,0.75)
     );
 }
 
