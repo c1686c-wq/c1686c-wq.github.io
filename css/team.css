@@ -17,10 +17,11 @@ body {
     color: var(--title);
 }
 
-/* ================= HERO（统一 publications 风格） ================= */
-.team-hero {
-     position: relative;
+/* ================= UNIVERSAL SUBPAGE HERO ================= */
+.sub-hero {
+    position: relative;
     height: 35vh;
+    min-height: 280px;
 
     background: url("../bg.png") center/cover no-repeat;
 
@@ -31,13 +32,12 @@ body {
     overflow: hidden;
 }
 
-/* ================= overlay（统一科研浅灰风） ================= */
-.team-hero::before {
+/* 浅灰科研风遮罩 */
+.sub-hero::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    /* ⭐ 和 publications 完全一致 */
     background: rgba(240,242,245,0.35);
 
     backdrop-filter: blur(1px);
@@ -46,7 +46,7 @@ body {
     z-index: 1;
 }
 
-/* ================= NAVBAR（统一 publications） ================= */
+/* ================= NAVBAR ================= */
 .navbar {
     position: absolute;
     top: 25px;
@@ -61,42 +61,42 @@ body {
 
 .nav-right a {
     text-decoration: none;
-    color: #6B5E4A;   /* ⭐统一 nav颜色 */
+    color: #6B5E4A;
     font-size: 16px;
     font-weight: 600;
-    transition: 0.25s;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .nav-right a:hover {
-    color: #B85C1A;
+    color: #A63D1E;
+    transform: scale(1.08);
 }
 
-/* active page */
+/* 当前页面 */
 .nav-right a.active {
     color: #B85C1A;
     font-weight: 700;
 }
 
-/* ================= HERO TEXT（统一 publications 字体体系） ================= */
-.team-hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+/* ================= CENTER TEXT ================= */
+.sub-hero-text {
+    position: relative;
     z-index: 3;
+    text-align: center;
 }
 
-.team-hero-text h1 {
-    font-size: 42px;     /* ⭐和 publications一致 */
+.sub-hero-text h1 {
+    font-size: 42px;
     font-weight: 700;
     color: #3E3A35;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 }
 
-.team-hero-text p {
+.sub-hero-text p {
     font-size: 18px;
     color: #8B7D6B;
+    margin: 0;
 }
 
 /* ================= CONTENT ================= */
