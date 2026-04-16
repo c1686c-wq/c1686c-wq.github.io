@@ -43,13 +43,12 @@ body {
 /* ================= 左上角 ================= */
 .top-left {
     position: absolute;
-    top: 28px;
-    left: 38px;
-    gap: 18px;
+    top: 30px;
+    left: 42px;
+    gap: 20px;
 
     display: flex;
     align-items: center;
-
     z-index: 3;
 }
 
@@ -61,16 +60,16 @@ body {
 .lab-text {
     display: flex;
     flex-direction: column;
+    gap: 6px;   /* ⭐ 两行间距 */
 }
-
 .line1 {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     color: var(--title);
 }
 
 .line2 {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--quote);
 }
 
@@ -159,27 +158,24 @@ body {
 
 /* ================= CONTENT ================= */
 .content {
-    max-width: 1050px;
+    max-width: 1200px;
     margin: auto;
     padding: 80px 20px;
+}
+
+.home-img {
+    display: block;
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    margin: 20px auto 50px;
+    border-radius: 14px;
 }
 
 /* 图片容器 */
 .img-wrapper {
     display: flex;
     justify-content: center;
-}
-
-.home-img {
-    display: block;
-    width: 100%;
-    max-width: 1050px;
-    height: auto;
-
-    margin: 20px auto 50px;
-    border-radius: 14px;
-
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 
 /* ================= TEXT ================= */
