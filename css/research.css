@@ -32,7 +32,7 @@ body {
     position: absolute;
     inset: 0;
 
-    background: rgba(240,242,245,0.35);
+    background: rgba(240,242,245,0.18);
 
     backdrop-filter: blur(0.001px);
     -webkit-backdrop-filter: blur(0.001px);
