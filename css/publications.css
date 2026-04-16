@@ -5,12 +5,13 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: "Georgia", serif;
+    color: #3E3A35;
     overflow-x: hidden;
+    background: #fff;
 }
 
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 .publications-hero {
     position: relative;
     height: 35vh;
@@ -24,47 +25,50 @@ body {
     overflow: hidden;
 }
 
-/* ===== 轻灰 + 模糊层（不会压死文字） ===== */
+/* ===== overlay（更清透 + 轻模糊） ===== */
 .publications-hero::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    background: rgba(240,242,245,0.45); /* ⭐比0.35更清晰 */
+    background: rgba(240,242,245,0.35); /* ⭐更轻 */
 
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px); /* ⭐关键：降低模糊 */
+    -webkit-backdrop-filter: blur(2px);
 
     z-index: 1;
 }
 
-/* ===== 确保所有内容在最上层 ===== */
+/* ===== 所有内容在最上层（强制稳定） ===== */
 .publications-hero > * {
     position: relative;
     z-index: 2;
 }
 
-/* ===== 如果你有标题文字，建议增强可读性 ===== */
+/* ===== HERO TEXT ===== */
+.hero-text {
+    text-align: center;
+}
+
 .publications-hero h1 {
-    color: #3E3A35;
     font-size: 42px;
     font-weight: 700;
+    color: #3E3A35;
+    margin: 0;
 }
 
 .publications-hero p {
     color: #8B7D6B;
+    font-size: 18px;
+    margin-top: 8px;
 }
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 .navbar {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    padding: 20px 40px;
-    display: flex;
-    justify-content: flex-end;
+    top: 25px;
+    right: 40px;
+    z-index: 3; /* ⭐确保一定在最上面 */
 }
 
 .nav-right {
@@ -73,34 +77,35 @@ body {
 }
 
 .nav-right a {
-    color: white;
+    color: #6B5E4A;   /* ⭐修复：之前是白色导致看不见 */
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.25s;
 }
 
-/* ===== HERO TEXT ===== */
-.hero-text {
-    color: white;
-    text-align: center;
+.nav-right a:hover {
+    color: #B85C1A;
 }
 
-/* ===== CONTENT ===== */
+/* ================= CONTENT ================= */
 .publications-container {
     max-width: 900px;
     margin: auto;
     padding: 70px 20px;
 }
 
-/* ===== PAPER ===== */
+/* ================= PAPER ================= */
 .paper {
     padding: 28px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .journal {
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
-    color: #666;
+    color: #6B5E4A;
     text-transform: uppercase;
     margin-bottom: 8px;
 }
@@ -111,10 +116,11 @@ body {
     margin-bottom: 10px;
 }
 
+/* 论文标题 */
 .title {
     display: inline-block;
     font-size: 20px;
-    color: #b30000;
+    color: #B85C1A;
     text-decoration: none;
     line-height: 1.5;
     transition: 0.3s;
