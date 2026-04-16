@@ -5,8 +5,7 @@
 /* ===== GLOBAL ===== */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
+    overflow-x: hidden;
 }
 
 /* ===== HERO ===== */
@@ -47,14 +46,12 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-
-    display: flex;
-    justify-content: flex-end;
+    right: 0;
 
     padding: 20px 40px;
 
-    z-index: 3;   /* ⭐关键：在遮罩上面 */
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* 导航 */
