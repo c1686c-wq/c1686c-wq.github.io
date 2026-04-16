@@ -15,8 +15,6 @@ body {
 .research-hero {
     position: relative;
     height: 35vh;
-    min-height: 320px;
-    max-height: 520px;
 
     background: url("../bg.png") center/cover no-repeat;
 
