@@ -89,11 +89,13 @@ body {
     color: var(--nav);
     font-size: 17px;
     font-weight: 600;
-    transition: 0.25s;
+    transition: color 0.25s ease, transform 0.25s ease;
+    display: inline-block;
 }
 
 .top-right a:hover {
-    color: var(--accent);
+    color: #A63D1E;
+    transform: scale(1.08);
 }
 
 /* ================= HERO CENTER ================= */
