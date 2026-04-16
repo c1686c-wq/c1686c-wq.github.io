@@ -20,15 +20,9 @@ body {
 
 /* ================= HERO ================= */
 .hero {
-    width: 100%;
-    height: 42vh;          /* ⭐ 改成内页式高度 */
-
-    min-height: 320px;     /* ⭐ 防止太矮 */
-    max-height: 520px;     /* ⭐ 防止太高 */
-
-    background: url("../bg.png") center center / cover no-repeat;
+    height: 100vh;
+    background: url("../bg.png") center/cover no-repeat;
     position: relative;
-
     filter: saturate(0.88) contrast(0.95);
 }
 
