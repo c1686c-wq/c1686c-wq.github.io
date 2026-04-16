@@ -1,67 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Join Us</title>
-<link rel="stylesheet" href="css/join.css">
-</head>
+/* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
 
-<body>
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
 
-<!-- ===== HERO ===== -->
-<div class="join-hero">
+/* ===== HERO ===== */
+.join-hero {
+    height: 35vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("../bg.png") center/cover no-repeat;
 
-    <div class="navbar">
-        <div class="nav-right">
-            <a href="team.html">Team</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="moments.html">Moments</a>
-            <a href="join.html">Join</a>
-            <a href="index.html">Home</a>
-        </div>
-    </div>
+    position: relative;
 
-    <div class="hero-text">
-        <h1>Join Us</h1>
-        <p>We are looking for curious minds</p>
-    </div>
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-</div>
+/* ===== NAVBAR ===== */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+}
 
-<!-- ===== MAIN CONTENT ===== -->
-<div class="join-container">
+.nav-right {
+    display: flex;
+    gap: 24px;
+}
 
-    <!-- LEFT -->
-    <div class="join-left">
-        <iframe
-            src="https://www.google.com/maps?q=Nanjing+University&output=embed">
-        </iframe>
-    </div>
+.nav-right a {
+    color: white;
+    text-decoration: none;
+}
 
-    <!-- VERTICAL LINE -->
-    <div class="divider"></div>
+/* ===== HERO TEXT ===== */
+.join-hero-text {
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
 
-    <!-- RIGHT -->
-    <div class="join-right">
-        <h2>Contact</h2>
+/* ===== CONTENT ===== */
+.join-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
 
-        <p><strong>Address:</strong><br>
-        Institute of Modern Biology<br>
-        Nanjing University, China</p>
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
 
-        <p><strong>Email:</strong><br>
-        example@nju.edu.cn</p>
+/* ===== LEFT MAP ===== */
+.join-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
-        <p><strong>Open Positions:</strong><br>
-        We welcome applications from PhD students, postdocs, and research assistants.</p>
+.join-left iframe {
+    width: 320px;
+    height: 320px;
+    border: none;
+    border-radius: 12px;
+}
 
-        <p><strong>Research Areas:</strong><br>
-        Aging, metabolism, neurobiology, spatial omics.</p>
-    </div>
+/* ===== MIDDLE LINE ===== */
+.vertical-line {
+    width: 1px;
+    height: 320px;
+    background: #ccc;
+}
 
-</div>
+/* ===== RIGHT INFO ===== */
+.join-right {
+    flex: 1;
+    text-align: left;
+}
 
-</body>
-</html>
+.join-right h2 {
+    margin-bottom: 25px;
+}
+
+.join-right p {
+    margin-bottom: 24px;
+    line-height: 1.8;
+}
