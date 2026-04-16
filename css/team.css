@@ -52,6 +52,8 @@ body {
 
     display: flex;
     justify-content: flex-end;
+
+    z-index: 3;   /* ⭐ 关键 */
 }
 
 /* 导航 */
@@ -129,5 +131,4 @@ body {
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 15px;
-}
 }
