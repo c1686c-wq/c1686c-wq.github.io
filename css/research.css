@@ -12,9 +12,11 @@ body {
 }
 
 /* ================= HERO（统一科研风） ================= */
-.research-hero {
+/* ================= UNIVERSAL SUBPAGE HERO ================= */
+.sub-hero {
     position: relative;
     height: 35vh;
+    min-height: 280px;
 
     background: url("../bg.png") center/cover no-repeat;
 
@@ -23,28 +25,23 @@ body {
     align-items: center;
 
     overflow: hidden;
-
-    /* ⭐统一视觉处理 */
-    filter: saturate(0.9) contrast(0.95);
 }
 
-/* ===== 统一 overlay（替代黑色渐变） ===== */
-.research-hero::before {
+/* 浅灰科研风遮罩 */
+.sub-hero::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    /* ⭐浅灰科研风 */
     background: rgba(240,242,245,0.35);
 
-    /* ⭐轻微模糊（不要太重） */
-    backdrop-filter: blur(1px)
+    backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
 
     z-index: 1;
 }
 
-/* ================= NAVBAR（统一所有页面） ================= */
+/* ================= NAVBAR ================= */
 .navbar {
     position: absolute;
     top: 25px;
@@ -58,35 +55,43 @@ body {
 }
 
 .nav-right a {
-    color: #6B5E4A;
     text-decoration: none;
+    color: #6B5E4A;
     font-size: 16px;
     font-weight: 600;
-    transition: 0.25s;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .nav-right a:hover {
-    color: #B85C1A;
+    color: #A63D1E;
+    transform: scale(1.08);
 }
 
-/* ================= HERO TEXT ================= */
-.hero-text {
+/* 当前页面 */
+.nav-right a.active {
+    color: #B85C1A;
+    font-weight: 700;
+}
+
+/* ================= CENTER TEXT ================= */
+.sub-hero-text {
     position: relative;
     z-index: 3;
     text-align: center;
 }
 
-.research-hero h1 {
+.sub-hero-text h1 {
     font-size: 42px;
     font-weight: 700;
     color: #3E3A35;
-    margin: 0;
+    margin: 0 0 10px;
 }
 
-.research-hero p {
+.sub-hero-text p {
     font-size: 18px;
     color: #8B7D6B;
-    margin-top: 8px;
+    margin: 0;
 }
 
 /* ===== CONTENT ===== */
