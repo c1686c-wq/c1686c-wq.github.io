@@ -40,8 +40,8 @@ body {
     /* ⭐ 和 publications 完全一致 */
     background: rgba(240,242,245,0.35);
 
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
 
     z-index: 1;
 }
