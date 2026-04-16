@@ -11,10 +11,11 @@ body {
     background: #fff;
 }
 
-/* ================= HERO ================= */
-.publications-hero {
+/* ================= UNIVERSAL SUBPAGE HERO ================= */
+.sub-hero {
     position: relative;
     height: 35vh;
+    min-height: 280px;
 
     background: url("../bg.png") center/cover no-repeat;
 
@@ -25,42 +26,18 @@ body {
     overflow: hidden;
 }
 
-/* ===== overlay（更清透 + 轻模糊） ===== */
-.publications-hero::before {
+/* 浅灰科研风遮罩 */
+.sub-hero::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    background: rgba(240,242,245,0.35); /* ⭐更轻 */
+    background: rgba(240,242,245,0.35);
 
-    backdrop-filter: blur(1px); /* ⭐关键：降低模糊 */
+    backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
 
     z-index: 1;
-}
-
-/* ===== 所有内容在最上层（强制稳定） ===== */
-.publications-hero > * {
-    position: relative;
-    z-index: 2;
-}
-
-/* ===== HERO TEXT ===== */
-.hero-text {
-    text-align: center;
-}
-
-.publications-hero h1 {
-    font-size: 42px;
-    font-weight: 700;
-    color: #3E3A35;
-    margin: 0;
-}
-
-.publications-hero p {
-    color: #8B7D6B;
-    font-size: 18px;
-    margin-top: 8px;
 }
 
 /* ================= NAVBAR ================= */
@@ -68,7 +45,7 @@ body {
     position: absolute;
     top: 25px;
     right: 40px;
-    z-index: 3; /* ⭐确保一定在最上面 */
+    z-index: 3;
 }
 
 .nav-right {
@@ -77,25 +54,43 @@ body {
 }
 
 .nav-right a {
-    color: #6B5E4A;
     text-decoration: none;
-
-    font-size: 17px;
+    color: #6B5E4A;
+    font-size: 16px;
     font-weight: 600;
-
-    position: relative;
-    transition: 0.25s;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
-/* ⭐ hover 变色 + 轻微上提 */
 .nav-right a:hover {
-    color: #B85C1A;
-    transform: translateY(-1px);
+    color: #A63D1E;
+    transform: scale(1.08);
 }
 
-/* ❌ 去掉任何“箭头/下划线装饰” */
-.nav-right a::after {
-    display: none;
+/* 当前页面 */
+.nav-right a.active {
+    color: #B85C1A;
+    font-weight: 700;
+}
+
+/* ================= CENTER TEXT ================= */
+.sub-hero-text {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.sub-hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #3E3A35;
+    margin: 0 0 10px;
+}
+
+.sub-hero-text p {
+    font-size: 18px;
+    color: #8B7D6B;
+    margin: 0;
 }
 
 /* ================= CONTENT ================= */
