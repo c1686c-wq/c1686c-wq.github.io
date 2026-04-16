@@ -1,4 +1,4 @@
-/* ===== GLOBAL ===== */
+/* ================= GLOBAL ================= */
 :root {
     --title: #3E3A35;
     --nav: #6B5E4A;
@@ -17,40 +17,42 @@ body {
     color: var(--title);
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        rgba(240,242,245,0.62),
-        rgba(240,242,245,0.82)
-    );
-
-    backdrop-filter: blur(0.5px);
-    -webkit-backdrop-filter: blur(0.5px);
-}
-
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 .team-hero {
     width: 100%;
-    height: 42vh;
-    min-height: 320px;
+
+    /* ⭐ 统一封面高度 */
+    height: 45vh;
+    min-height: 380px;
+    max-height: 520px;
+
     background: url("../bg.png") center/cover no-repeat;
     position: relative;
+    overflow: hidden;
 }
 
-.team-hero::after {
+/* ================= 模糊+灰度层（关键） ================= */
+.team-hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(240,242,245,0.45);
+
+    /* ⭐ 更清透灰 */
+    background: rgba(240,242,245,0.35);
+
+    /* ⭐ 背景模糊 */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    z-index: 1;
 }
 
+/* ================= NAVBAR ================= */
 .navbar {
     position: absolute;
     top: 28px;
     right: 40px;
-    z-index: 3;
+    z-index: 2;
 }
 
 .nav-right {
@@ -63,19 +65,22 @@ body {
     color: var(--nav);
     font-size: 17px;
     font-weight: 600;
+    transition: 0.25s;
 }
 
 .nav-right a:hover {
     color: var(--accent);
 }
 
+/* ================= HERO TEXT ================= */
 .team-hero-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 3;
+
+    z-index: 2;
 }
 
 .team-hero-text h1 {
@@ -88,35 +93,49 @@ body {
     color: var(--quote);
 }
 
-/* ===== CONTENT ===== */
+/* ================= CONTENT ================= */
 .team-container {
     max-width: 1100px;
     margin: auto;
     padding: 80px 30px;
 }
 
-/* ===== MEMBER ===== */
+/* ================= MEMBER ROW ================= */
 .member-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 60px;
     margin-bottom: 80px;
 }
 
-/* 反转布局 */
+/* 交错布局 */
 .member-row.reverse {
     flex-direction: row-reverse;
 }
 
+/* ================= IMAGE ================= */
 .member-row img {
     width: 260px;
     height: 260px;
     object-fit: cover;
     border-radius: 18px;
+
     flex-shrink: 0;
+
+    /* ⭐ hover动画 */
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
+/* hover效果 */
+.member-row img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= TEXT ================= */
 .member-info {
     flex: 1;
 }
