@@ -34,8 +34,8 @@ body {
 
     background: rgba(240,242,245,0.35);
 
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(0.1px);
+    -webkit-backdrop-filter: blur(0.1px);
 
     z-index: 1;
 }
@@ -55,7 +55,7 @@ body {
 
 .nav-right a {
     text-decoration: none;
-    color: #6B5E4A;
+    color: #F8F8FF;
     font-size: 16px;
     font-weight: 600;
     display: inline-block;
@@ -63,7 +63,7 @@ body {
 }
 
 .nav-right a:hover {
-    color: #A63D1E;
+    color: #F8F8FF;
     transform: scale(1.08);
 }
 
