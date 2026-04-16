@@ -6,7 +6,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #F8F8FF;
+    color: #3E3A35;
     overflow-x: hidden;
     background: #fff;
 }
@@ -17,7 +17,7 @@ body {
     height: 35vh;
     min-height: 280px;
 
-    background: url("../fluorescence.jpeg") center/cover no-repeat;
+    background: url("../fluorescence.jpg") center/cover no-repeat;
 
     display: flex;
     justify-content: center;
@@ -83,13 +83,13 @@ body {
 .sub-hero-text h1 {
     font-size: 42px;
     font-weight: 700;
-    color: #3E3A35;
+    color: #F8F8FF;
     margin: 0 0 10px;
 }
 
 .sub-hero-text p {
     font-size: 18px;
-    color: #8B7D6B;
+    color: #F8F8FF;
     margin: 0;
 }
 
