@@ -32,10 +32,10 @@ body {
     position: absolute;
     inset: 0;
 
-    background: rgba(240,242,245,0.35);
+    background: rgba(240,242,245,0.13);
 
-    backdrop-filter: blur(0.01px);
-    -webkit-backdrop-filter: blur(0.01px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
     z-index: 1;
 }
