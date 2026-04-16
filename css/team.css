@@ -17,80 +17,88 @@ body {
     color: var(--title);
 }
 
-/* ================= HERO ================= */
+/* ================= HERO（统一 publications 风格） ================= */
 .team-hero {
     width: 100%;
 
-    /* ⭐ 统一封面高度 */
-    height: 45vh;
-    min-height: 380px;
+    height: 42vh;
+    min-height: 320px;
     max-height: 520px;
 
     background: url("../bg.png") center/cover no-repeat;
     position: relative;
     overflow: hidden;
+
+    /* ⭐ 和 publications 一致的视觉处理 */
+    filter: saturate(0.9) contrast(0.95);
 }
 
-/* ================= 模糊+灰度层（关键） ================= */
+/* ================= overlay（统一科研浅灰风） ================= */
 .team-hero::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    /* ⭐ 更清透灰 */
+    /* ⭐ 和 publications 完全一致 */
     background: rgba(240,242,245,0.35);
 
-    /* ⭐ 背景模糊 */
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 
     z-index: 1;
 }
 
-/* ================= NAVBAR ================= */
+/* ================= NAVBAR（统一 publications） ================= */
 .navbar {
     position: absolute;
-    top: 28px;
+    top: 25px;
     right: 40px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .nav-right {
     display: flex;
-    gap: 28px;
+    gap: 24px;
 }
 
 .nav-right a {
     text-decoration: none;
-    color: var(--nav);
-    font-size: 17px;
+    color: #6B5E4A;   /* ⭐统一 nav颜色 */
+    font-size: 16px;
     font-weight: 600;
     transition: 0.25s;
 }
 
 .nav-right a:hover {
-    color: var(--accent);
+    color: #B85C1A;
 }
 
-/* ================= HERO TEXT ================= */
+/* active page */
+.nav-right a.active {
+    color: #B85C1A;
+    font-weight: 700;
+}
+
+/* ================= HERO TEXT（统一 publications 字体体系） ================= */
 .team-hero-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-
-    z-index: 2;
+    z-index: 3;
 }
 
 .team-hero-text h1 {
-    font-size: 52px;
-    margin-bottom: 12px;
+    font-size: 42px;     /* ⭐和 publications一致 */
+    font-weight: 700;
+    color: #3E3A35;
+    margin-bottom: 10px;
 }
 
 .team-hero-text p {
-    font-size: 20px;
-    color: var(--quote);
+    font-size: 18px;
+    color: #8B7D6B;
 }
 
 /* ================= CONTENT ================= */
