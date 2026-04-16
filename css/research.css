@@ -34,8 +34,8 @@ body {
 
     background: rgba(240,242,245,0.35);
 
-    backdrop-filter: blur(0.1px);
-    -webkit-backdrop-filter: blur(0.1px);
+    backdrop-filter: blur(0.001px);
+    -webkit-backdrop-filter: blur(0.001px);
 
     z-index: 1;
 }
