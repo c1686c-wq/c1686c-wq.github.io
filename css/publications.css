@@ -26,20 +26,7 @@ body {
     overflow: hidden;
 }
 
-/* 浅灰科研风遮罩 */
-.sub-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: rgba(240,242,245,0.13);
-
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-
-    z-index: 1;
-}
-
+https://c1686c-wq.github.io/research.html
 /* ================= NAVBAR ================= */
 .navbar {
     position: absolute;
