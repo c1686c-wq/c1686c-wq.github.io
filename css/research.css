@@ -26,20 +26,55 @@ body {
     overflow: hidden;
 }
 
-/* 浅灰科研风遮罩 */
+/* ================= 高级渐变遮罩（重点） ================= */
 .sub-hero::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    background: rgba(240,242,245,0.18);
-
-    backdrop-filter: blur(0.001px);
-    -webkit-backdrop-filter: blur(0.001px);
+    /* ⭐中心清晰 + 边缘渐暗 */
+    background: radial-gradient(
+        circle at center,
+        rgba(240,242,245,0.05) 0%,
+        rgba(240,242,245,0.12) 45%,
+        rgba(240,242,245,0.28) 100%
+    );
 
     z-index: 1;
 }
 
+/* ================= 再加一层“边缘暗角（更高级）” ================= */
+.sub-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,0.00) 50%,
+        rgba(0,0,0,0.20) 100%
+    );
+
+    z-index: 2;
+}
+
+/* ================= 文字层 ================= */
+.sub-hero-text {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.sub-hero-text h1 {
+    color: #3E3A35;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.sub-hero-text p {
+    color: #6B5E4A;
+    font-size: 18px;
+}
 /* ================= NAVBAR ================= */
 .navbar {
     position: absolute;
