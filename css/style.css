@@ -83,6 +83,23 @@ body {
     margin: 15px auto;
 }
 
+/* ================= CONTENT ================= */
+.content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+/* ⭐ 关键：确保图片一定显示 */
+.home-img {
+    width: 100%;
+    display: block;          /* 防止inline空隙 */
+    border-radius: 12px;
+    margin-bottom: 40px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
 /* ================= SCROLL ================= */
 .scroll-down {
     position: absolute;
