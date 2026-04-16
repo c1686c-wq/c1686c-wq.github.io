@@ -10,29 +10,40 @@ body {
     color: #333;
 }
 
-/* ===== HERO ===== */
-.join-hero {
-    height: 35vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url("../bg.png") center/cover no-repeat;
-
+/* ================= UNIVERSAL SUBPAGE HERO ================= */
+.sub-hero {
     position: relative;
+    height: 35vh;
+    min-height: 280px;
+
+    background: url("../bg.png") center/cover no-repeat;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
 }
 
-/* ===== NAVBAR ===== */
+/* 浅灰科研风遮罩 */
+.sub-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(240,242,245,0.35);
+
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+
+    z-index: 1;
+}
+
+/* ================= NAVBAR ================= */
 .navbar {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    padding: 20px 40px;
-    display: flex;
-    justify-content: flex-end;
+    top: 25px;
+    right: 40px;
     z-index: 3;
 }
 
@@ -42,17 +53,44 @@ body {
 }
 
 .nav-right a {
-    color: white;
     text-decoration: none;
+    color: #6B5E4A;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
-/* ===== HERO TEXT ===== */
-.join-hero-text {
-    color: white;
+.nav-right a:hover {
+    color: #A63D1E;
+    transform: scale(1.08);
+}
+
+/* 当前页面 */
+.nav-right a.active {
+    color: #B85C1A;
+    font-weight: 700;
+}
+
+/* ================= CENTER TEXT ================= */
+.sub-hero-text {
+    position: relative;
+    z-index: 3;
     text-align: center;
-    z-index: 2;
 }
 
+.sub-hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #3E3A35;
+    margin: 0 0 10px;
+}
+
+.sub-hero-text p {
+    font-size: 18px;
+    color: #8B7D6B;
+    margin: 0;
+}
 /* ===== CONTENT ===== */
 .join-container {
     max-width: 1100px;
