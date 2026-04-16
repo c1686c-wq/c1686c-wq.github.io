@@ -12,28 +12,47 @@ body {
 
 /* ===== HERO ===== */
 .publications-hero {
+    position: relative;
     height: 35vh;
 
     background: url("../bg.png") center/cover no-repeat;
-    position: relative;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
 }
 
-/* ⭐ 轻灰 + 透明感 + 不压图 */
+/* ===== 轻灰 + 模糊层（不会压死文字） ===== */
 .publications-hero::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    background: rgba(240,242,245,0.35);
+    background: rgba(240,242,245,0.45); /* ⭐比0.35更清晰 */
 
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 
     z-index: 1;
+}
+
+/* ===== 确保所有内容在最上层 ===== */
+.publications-hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== 如果你有标题文字，建议增强可读性 ===== */
+.publications-hero h1 {
+    color: #3E3A35;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.publications-hero p {
+    color: #8B7D6B;
 }
 
 /* ===== NAVBAR ===== */
