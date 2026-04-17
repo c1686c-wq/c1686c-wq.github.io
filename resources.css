@@ -1,0 +1,111 @@
+/* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* ================= UNIVERSAL SUBPAGE HERO ================= */
+.sub-hero {
+    position: relative;
+    height: 35vh;
+    min-height: 280px;
+
+    background: url("../bg.png") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* ================= 高级渐变遮罩（重点） ================= */
+.sub-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* ⭐中心清晰 + 边缘渐暗 */
+    background: radial-gradient(
+        circle at center,
+        rgba(240,242,245,0.05) 0%,
+        rgba(240,242,245,0.12) 45%,
+        rgba(240,242,245,0.28) 100%
+    );
+
+    z-index: 1;
+}
+
+/* ================= 再加一层“边缘暗角（更高级）” ================= */
+.sub-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,0.00) 50%,
+        rgba(0,0,0,0.20) 100%
+    );
+
+    z-index: 2;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    z-index: 3;
+}
+
+.nav-right {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #6B5E4A;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-right a:hover {
+    color: #A63D1E;
+    transform: scale(1.08);
+}
+
+/* 当前页面 */
+.nav-right a.active {
+    color: #B85C1A;
+    font-weight: 700;
+}
+
+/* ================= CENTER TEXT ================= */
+.sub-hero-text {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.sub-hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #3E3A35;
+    margin: 0 0 10px;
+}
+
+.sub-hero-text p {
+    font-size: 18px;
+    color: #8B7D6B;
+    margin: 0;
+}
