@@ -78,10 +78,10 @@ body {
 
 .lab-title {
     font-size: 55px;
-    font-weight: 700;
-    color: white;   /* 和下面主标题一样 */
+    font-weight: 600;
+    color: var(--quote);   /* 和下面主标题一样 */
     letter-spacing: 6px;
-    margin-bottom: 12px;
+    margin-bottom: 2px;
     text-transform: uppercase;
 }
 .hero-center h1 {
@@ -92,7 +92,7 @@ body {
 .hero-center p {
     color: var(--quote);
     font-size: 20px;
-    margin-top: 6px;
+    margin-top: 3px;
 }
 
 /* 高亮文字 */
