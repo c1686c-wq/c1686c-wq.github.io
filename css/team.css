@@ -22,7 +22,7 @@ body {
     position: relative;
     height: 35vh;
     min-height: 280px;
-    background: url("../team_pic.jpeg") center/cover no-repeat;
+    background: url("../team_pic.jpeg") center 30% / cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +75,7 @@ body {
 
 .nav-right a {
     text-decoration: none;
-    color: var(--nav);
+    color: #F8F8FF;
     font-weight: 600;
 }
 
@@ -87,6 +87,20 @@ body {
     position: relative;
     z-index: 3;
     text-align: center;
+}
+.sub-hero-text h1 {
+    font-size: 42px;
+    margin: 0 0 10px;
+}
+
+.sub-hero-text .our {
+    color: #ECB8D6;
+    font-weight: 700;
+}
+
+.sub-hero-text .team {
+    color: #ffffff;
+    font-weight: 700;
 }
 
 /* ================= CONTENT ================= */
