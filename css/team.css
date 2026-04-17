@@ -148,3 +148,14 @@ body {
         text-align: center;
     }
 }
+
+.email-link {
+    color: #2F5D8C;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.email-link:hover {
+    color: #1E466B;
+    text-decoration: underline;
+}
