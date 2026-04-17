@@ -40,38 +40,6 @@ body {
     -webkit-backdrop-filter: blur(0.5px);
 }
 
-/* ================= 左上角 ================= */
-.top-left {
-    position: absolute;
-    top: 30px;
-    left: 42px;
-    gap: 20px;
-
-    display: flex;
-    align-items: center;
-    z-index: 3;
-}
-
-.logo {
-    width: 48px;
-    height: auto;
-}
-
-.lab-text {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;   /* ⭐ 两行间距 */
-}
-.line1 {
-    font-size: 23px;
-    font-weight: 700;
-    color: var(--title);
-}
-
-.line2 {
-    font-size: 16px;
-    color: var(--quote);
-}
 
 /* ================= NAVBAR ================= */
 .top-right {
@@ -125,6 +93,14 @@ body {
     font-style: italic;
 }
 
+.lab-title {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: white;   /* 和下面主标题一样 */
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
 /* ================= SCROLL ================= */
 .scroll-down {
     position: absolute;
