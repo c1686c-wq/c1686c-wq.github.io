@@ -74,6 +74,15 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 3;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-center p {
+    color: var(--quote);
+    font-size: 20px;
+    margin-top: 24px;
+    text-align: center;
 }
 
 .lab-title {
@@ -91,12 +100,6 @@ body {
     color: #433F3B;
     margin: 0;
     line-height: 1;
-}
-
-.hero-center p {
-    color: var(--quote);
-    font-size: 20px;
-    margin-top: 24px;
 }
 
 /* 高亮文字 */
