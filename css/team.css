@@ -87,20 +87,7 @@ body {
     position: relative;
     z-index: 3;
     text-align: center;
-}
-.sub-hero-text h1 {
-    font-size: 42px;
-    margin: 0 0 10px;
-}
-
-.sub-hero-text .our {
-    color: #ECB8D6;
-    font-weight: 700;
-}
-
-.sub-hero-text .team {
-    color: #ffffff;
-    font-weight: 700;
+    color: #F8F8FF;
 }
 
 /* ================= CONTENT ================= */
