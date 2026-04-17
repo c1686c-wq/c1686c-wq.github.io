@@ -26,7 +26,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .sub-hero::before {
@@ -34,11 +33,9 @@ body {
     position: absolute;
     inset: 0;
     background: rgba(240,242,245,0.35);
-    backdrop-filter: blur(1px);
     z-index: 1;
 }
 
-/* ================= NAV ================= */
 .navbar {
     position: absolute;
     top: 25px;
@@ -54,36 +51,17 @@ body {
 .nav-right a {
     text-decoration: none;
     color: var(--nav);
-    font-size: 16px;
     font-weight: 600;
-    transition: 0.25s;
-}
-
-.nav-right a:hover {
-    color: #A63D1E;
-    transform: scale(1.08);
 }
 
 .nav-right a.active {
     color: var(--accent);
-    font-weight: 700;
 }
 
-/* ================= HERO TEXT ================= */
 .sub-hero-text {
     position: relative;
     z-index: 3;
     text-align: center;
-}
-
-.sub-hero-text h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.sub-hero-text p {
-    color: var(--quote);
-    font-size: 18px;
 }
 
 /* ================= CONTENT ================= */
@@ -96,84 +74,73 @@ body {
 .section-title {
     font-size: 30px;
     margin: 70px 0 35px;
-    color: var(--title);
-    border-left: 5px solid var(--accent);
-    padding-left: 16px;
+    border-left: 4px solid var(--accent);
+    padding-left: 15px;
 }
 
 /* ================= PI ================= */
-.pi-row {
+.pi-wrapper {
     display: flex;
-    gap: 50px;
-    align-items: center;
-    margin-bottom: 40px;
+    justify-content: center;
 }
 
 /* ================= GRID ================= */
 .member-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    gap: 60px 40px;
 }
 
 /* ================= CARD ================= */
 .member-card {
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
+    text-align: center;
 }
 
-/* ================= PHOTO FRAME ================= */
+.member-card.single {
+    max-width: 320px;
+}
+
+/* ================= PHOTO ================= */
 .photo-frame {
-    width: 180px;
-    height: 220px;
-    border: 2px solid #ddd;
+    width: 220px;
+    height: 260px;
+    margin: 0 auto 24px;
     border-radius: 18px;
+    border: 2px solid #ddd;
     background: linear-gradient(145deg, #fafafa, #f0f0f0);
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    flex-shrink: 0;
     transition: 0.3s;
 }
 
 .photo-frame:hover {
     transform: scale(1.03);
-    box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.12);
 }
 
 /* ================= TEXT ================= */
 .member-info h3 {
-    font-size: 26px;
-    margin: 0 0 8px;
+    font-size: 24px;
+    margin-bottom: 8px;
 }
 
 .member-info span {
     display: block;
     color: var(--accent);
-    font-size: 17px;
-    margin-bottom: 14px;
+    font-size: 16px;
+    margin-bottom: 12px;
 }
 
 .member-info p {
     color: var(--quote);
-    line-height: 1.8;
-    font-size: 16px;
-    margin: 0;
+    line-height: 1.7;
+    font-size: 15px;
+    max-width: 280px;
+    margin: auto;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-    .pi-row,
-    .member-card {
-        flex-direction: column;
-    }
-
     .member-grid {
         grid-template-columns: 1fr;
-    }
-
-    .photo-frame {
-        width: 100%;
-        max-width: 220px;
-        height: 260px;
     }
 }
