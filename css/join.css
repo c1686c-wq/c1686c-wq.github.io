@@ -16,7 +16,7 @@ body {
     height: 35vh;
     min-height: 280px;
 
-    background: url("../join_pic.jpg") center/cover no-repeat;
+    background: url("../bg.png") center/cover no-repeat;
 
     display: flex;
     justify-content: center;
