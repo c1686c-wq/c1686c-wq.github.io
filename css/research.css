@@ -129,29 +129,26 @@ body {
 }
 
 /* ===== CONTENT ===== */
-.research-container p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #444;
-    text-align: justify; /* ⭐关键 */
-    line-height: 1.8;
+.research-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 20px;
 }
 
-/* 大标题 */
 .research-container h2 {
     font-size: 36px;
     margin-bottom: 40px;
     text-transform: uppercase;
 }
 
-/* 正文 */
 .research-container p {
     font-size: 18px;
     margin-bottom: 30px;
     color: #444;
+    line-height: 1.8;
+    text-align: justify;
 }
 
-/* 加粗部分 */
 .research-container strong {
     color: #111;
 }
