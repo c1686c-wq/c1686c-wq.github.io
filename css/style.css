@@ -77,13 +77,15 @@ body {
 }
 
 .lab-title {
-    font-size: 55px;
-    font-weight: 600;
-    color: var(--quote);   /* 和下面主标题一样 */
-    letter-spacing: 6px;
-    margin-bottom: 2px;
+    font-size: 90px;
+    font-weight: 700;
+    color: #3E3A35;
+    letter-spacing: 8px;
+    line-height: 1;
+    margin-bottom: -8px;
     text-transform: uppercase;
 }
+
 .hero-center h1 {
     font-size: clamp(34px, 4vw, 58px);
     white-space: nowrap;
