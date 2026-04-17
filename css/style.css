@@ -82,7 +82,7 @@ body {
     color: #433F3B;
     letter-spacing: 8px;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     }
 
 .hero-center h1 {
@@ -96,7 +96,7 @@ body {
 .hero-center p {
     color: var(--quote);
     font-size: 20px;
-    margin-top: 18px;
+    margin-top: 12px;
 }
 
 /* 高亮文字 */
