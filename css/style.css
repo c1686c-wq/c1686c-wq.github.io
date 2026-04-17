@@ -76,6 +76,14 @@ body {
     z-index: 3;
 }
 
+.lab-title {
+    font-size: 55px;
+    font-weight: 700;
+    color: white;   /* 和下面主标题一样 */
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
 .hero-center h1 {
     font-size: clamp(34px, 4vw, 58px);
     white-space: nowrap;
@@ -93,14 +101,6 @@ body {
     font-style: italic;
 }
 
-.lab-title {
-    font-size: 5.5rem;
-    font-weight: 700;
-    color: white;   /* 和下面主标题一样 */
-    letter-spacing: 6px;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-}
 /* ================= SCROLL ================= */
 .scroll-down {
     position: absolute;
