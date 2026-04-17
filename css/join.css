@@ -92,64 +92,69 @@ body {
     margin: 0;
 }
 /* =========================== CONTENT =========================== */
+/* =========================== CONTENT WRAPPER =========================== */
 .join-page {
     max-width: 1100px;
     margin: 0 auto;
     padding: 80px 20px;
 }
 
+/* =========================== TEXT SECTION =========================== */
 .join-text {
     margin-bottom: 60px;
 }
 
 .join-text p {
-    line-height: 1.8;
     margin-bottom: 24px;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #333;
 }
 
+/* =========================== MAIN LAYOUT =========================== */
 .join-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+    gap: 60px;
 }
 
-/* ===== LEFT MAP ===== */
+/* =========================== LEFT MAP =========================== */
 .join-left {
-    flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.join-left iframe {
-    width: 400px;
-    height: 400px;
+.join-left iframe,
+.join-left img {
+    width: 280px;
+    height: 280px;
     border: none;
     border-radius: 12px;
+    object-fit: cover;
 }
 
-/* ===== MIDDLE LINE ===== */
+/* =========================== MIDDLE LINE =========================== */
 .vertical-line {
     width: 1px;
-    height: 320px;
+    height: 260px;
     background: #ccc;
 }
 
-/* ===== RIGHT INFO ===== */
+/* =========================== RIGHT CONTENT =========================== */
 .join-right {
-    flex: 1;
     text-align: left;
+    flex: 1;
 }
 
 .join-right h2 {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    color: #3E3A35;
 }
 
 .join-right p {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     line-height: 1.8;
+    color: #333;
 }
