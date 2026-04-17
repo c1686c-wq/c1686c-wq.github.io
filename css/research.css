@@ -129,10 +129,11 @@ body {
 }
 
 /* ===== CONTENT ===== */
-.research-container {
-    max-width: 850px;
-    margin: auto;
-    padding: 70px 20px;
+.research-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #444;
+    text-align: justify; /* ⭐关键 */
     line-height: 1.8;
 }
 
