@@ -106,22 +106,32 @@ body {
 }
 
 /* ================= SCROLL ================= */
-.photo-placeholder {
+.bottom-cards {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 170px;
+    height: 25vh;   /* 页面1/4高度 */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    z-index: 3;
+    gap: 0;
+    z-index: 2;
 }
 
-.photo-placeholder div {
-    border: 1px dashed rgba(255,255,255,0.15);
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(1px);
+.bottom-cards .card {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(62, 58, 53, 0.2);
+    border-radius: 20px;
+    margin: 10px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.bottom-cards .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
 .scroll-down {
     position: absolute;
     bottom: 28px;
