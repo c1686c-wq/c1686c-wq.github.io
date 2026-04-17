@@ -77,7 +77,7 @@ body {
 }
 
 .lab-title {
-    font-size: 110px;
+    font-size: 96px;
     font-weight: 700;
     color: #433F3B;
     letter-spacing: 8px;
@@ -86,7 +86,7 @@ body {
     }
 
 .hero-center h1 {
-    font-size: clamp(28px, 3vw, 44px);
+    font-size: clamp(24px, 2.5vw, 38px);
     white-space: nowrap;
     color: #433F3B;
     margin: 0;
@@ -96,7 +96,7 @@ body {
 .hero-center p {
     color: var(--quote);
     font-size: 20px;
-    margin-top: 12px;
+    margin-top: 24px;
 }
 
 /* 高亮文字 */
