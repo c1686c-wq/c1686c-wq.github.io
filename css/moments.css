@@ -102,12 +102,12 @@ body {
     font-size: 42px;
     font-weight: 700;
     color: #3E3A35;
-    margin: 0 0 10px;
+    margin: 0 0 4px;
 }
 
 .sub-hero-text p {
     font-size: 18px;
-    margin: -5px;
+    margin: 0;
     color: #B85C1A;
 }
 /* ===== CONTENT ===== */
