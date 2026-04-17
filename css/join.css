@@ -128,8 +128,8 @@ body {
 
 .join-left iframe,
 .join-left img {
-    width: 280px;
-    height: 280px;
+    width: 420px;
+    height: 420px;
     border: none;
     border-radius: 12px;
     object-fit: cover;
