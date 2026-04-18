@@ -1,4 +1,3 @@
-/* ================= GLOBAL ================= */
 :root {
     --bg: #ffffff;
     --title: #3E3A35;
@@ -23,33 +22,39 @@ body {
     height: 100vh;
     background: url("../bg.png") center/cover no-repeat;
     position: relative;
-    filter: saturate(0.88) contrast(0.95);
 }
 
-/* 更灰一点的封面 */
 .overlay {
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
-        rgba(240,242,245,0.62),
+        rgba(240,242,245,0.55),
         rgba(240,242,245,0.82)
     );
-
-    backdrop-filter: blur(0.5px);
-    -webkit-backdrop-filter: blur(0.5px);
 }
 
+/* ================= LOGO ================= */
+.logo {
+    position: absolute;
+    top: 22px;
+    left: 35px;
+    z-index: 5;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
 
 /* ================= NAVBAR ================= */
 .top-right {
     position: absolute;
-    top: 28px;
+    top: 30px;
     right: 40px;
-
     display: flex;
     gap: 28px;
-    z-index: 3;
+    z-index: 5;
 }
 
 .top-right a {
@@ -57,81 +62,64 @@ body {
     color: var(--nav);
     font-size: 17px;
     font-weight: 600;
-    transition: color 0.25s ease, transform 0.25s ease;
-    display: inline-block;
+    transition: 0.25s;
 }
 
 .top-right a:hover {
     color: #A63D1E;
-    transform: scale(1.08);
 }
 
 /* ================= HERO CENTER ================= */
 .hero-center {
     position: absolute;
-    top: 40%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 3;
     width: 100%;
-    max-width: 1200px;
+}
+
+.lab-title {
+    font-size: 90px;
+    font-weight: 700;
+    color: #433F3B;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+}
+
+.hero-center h1 {
+    font-size: clamp(24px, 2.5vw, 38px);
+    color: #433F3B;
+    margin: 0;
 }
 
 .hero-center p {
     color: var(--quote);
     font-size: 20px;
     margin-top: 24px;
-    text-align: center;
 }
 
-.lab-title {
-    font-size: 96px;
-    font-weight: 700;
-    color: #433F3B;
-    letter-spacing: 8px;
-    line-height: 1;
-    margin-bottom: 15px;
-    }
-
-.hero-center h1 {
-    font-size: clamp(24px, 2.5vw, 38px);
-    white-space: nowrap;
-    color: #433F3B;
-    margin: 0;
-    line-height: 1;
-}
-
-/* 高亮文字 */
-.highlight {
-    color: var(--accent);
-    font-style: italic;
-}
-
-/* ================= SCROLL ================= */
+/* ================= BOTTOM CARDS ================= */
 .bottom-cards {
     position: absolute;
     bottom: 8vh;
-    left: 0;
-    width: 100%;
-    height: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    height: 24vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    z-index: 2;
+    gap: 18px;
+    z-index: 4;
 }
 
 .bottom-cards .card {
-    margin: 10px;
-    border-radius: 20px;
+    border-radius: 24px;
     overflow: hidden;
-    background: #ffffff;
-    border: 1px solid rgba(62, 58, 53, 0.12);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.bottom-cards .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
 }
 
 .bottom-cards video,
@@ -142,12 +130,13 @@ body {
     display: block;
 }
 
+/* ================= SCROLL ================= */
 .scroll-down {
     position: absolute;
-    bottom: 28px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 5;
 }
 
 .circle {
@@ -155,15 +144,14 @@ body {
     height: 42px;
     border: 1px solid var(--quote);
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .arrow {
-    color: var(--nav);
     font-size: 20px;
+    color: var(--nav);
 }
 
 /* ================= CONTENT ================= */
@@ -182,31 +170,14 @@ body {
     border-radius: 14px;
 }
 
-/* 图片容器 */
-.img-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-/* ================= TEXT ================= */
-section {
-    margin-bottom: 60px;
-}
-
 h2 {
     font-size: 30px;
     margin-bottom: 20px;
-    color: var(--title);
-}
-
-p {
-    line-height: 1.8;
-    color: var(--quote);
-    text-align: justify;
-    text-justify: inter-word;
 }
 
 .about p {
-    margin-bottom: 24px;
     line-height: 1.9;
+    color: var(--quote);
+    text-align: justify;
+    margin-bottom: 24px;
 }
