@@ -42,9 +42,8 @@ body {
 }
 
 .logo img {
-    height: 60px;
+    height: clamp(90px, 6vw, 120px);
     width: auto;
-    display: block;
 }
 
 /* ================= NAVBAR ================= */
