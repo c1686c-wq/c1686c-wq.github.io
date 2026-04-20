@@ -155,6 +155,11 @@ body {
     margin-bottom: 12px;
 }
 
+.contact-line .indent {
+    display: inline-block;
+    color: var(--quote);
+}
+
 .member-info p {
     color: var(--quote);
     line-height: 1.8;
