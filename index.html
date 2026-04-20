@@ -10,12 +10,15 @@
 
 <!-- ================= HERO ================= -->
 <div class="hero">
+
+    <!-- glass bar -->
     <div class="top-glass-bar"></div>
+
     <div class="overlay">
 
-        <!-- 左上角 LOGO + 文本 -->
+        <!-- LOGO -->
         <div class="logo-block">
-            <img src="./home/logo-nju.png" alt="WU Lab Logo" class="logo-img">
+            <img src="./home/logo-nju.png" class="logo-img">
 
             <div class="logo-text">
                 <div class="logo-line1">Institute of Modern Biology</div>
@@ -23,7 +26,7 @@
             </div>
         </div>
 
-        <!-- NAVBAR -->
+        <!-- NAV -->
         <div class="top-right">
             <a href="team.html">Team</a>
             <a href="research.html">Research</a>
@@ -34,41 +37,32 @@
             <a href="index.html">Home</a>
         </div>
 
-        <!-- 中间文字 -->
+        <!-- CENTER -->
         <div class="hero-center">
             <div class="lab-title">WU Lab</div>
             <h1>Spatial Aging Biology & Disease</h1>
         </div>
 
-<!-- ========================== 图片循环带（新增） ======================= -->
-    <div class="photo-strip-wrapper">
-        <div class="photo-strip">
-        <video autoplay muted loop playsinline>
-            <source src="./home/home_1.mp4" type="video/mp4">
-        </video>
-            <img src="./home/home_2.jpg" alt="">
-            <img src="./home/home_3.jpg" alt="">
-            <img src="./home/home_4.jpg" alt="">
-            <img src="./home/home_5.jpg" alt="">
-            <img src="./home/home_6.jpg" alt="">
-            <img src="./home/home_7.jpg" alt="">
-            <img src="./home/home_8.jpg" alt="">
-    
-            <!-- 复制一套实现无缝 -->
-        <video autoplay muted loop playsinline>
-            <source src="./home/home_1.mp4" type="video/mp4">
-        </video>
-            <img src="./home/home_2.jpg" alt="">
-            <img src="./home/home_3.jpg" alt="">
-            <img src="./home/home_4.jpg" alt="">
-            <img src="./home/home_5.jpg" alt="">
-            <img src="./home/home_6.jpg" alt="">
-            <img src="./home/home_7.jpg" alt="">
-            <img src="./home/home_8.jpg" alt="">
-        </div>
-    </div>
+        <!-- ================= COVER FLOW STRIP ================= -->
+        <div class="photo-strip-wrapper">
+            <div class="photo-strip" id="flow">
 
-        <!-- scroll -->
+                <video autoplay muted loop playsinline>
+                    <source src="./home/home_1.mp4">
+                </video>
+
+                <img src="./home/home_2.jpg">
+                <img src="./home/home_3.jpg">
+                <img src="./home/home_4.jpg">
+                <img src="./home/home_5.jpg">
+                <img src="./home/home_6.jpg">
+                <img src="./home/home_7.jpg">
+                <img src="./home/home_8.jpg">
+
+            </div>
+        </div>
+
+        <!-- SCROLL -->
         <div class="scroll-down">
             <div class="circle">
                 <div class="arrow">⌄</div>
@@ -78,41 +72,33 @@
     </div>
 </div>
 
-<!-- ================= CONTENT ================= -->
-<div class="content">
-    <img src="homepage.jpeg" class="home-img">
+<!-- ================= JS (核心 cover flow) ================= -->
+<script>
+const container = document.getElementById("flow");
+const items = container.querySelectorAll("img, video");
 
-    <section class="about">
-        <h2>About</h2>
+function update() {
+    const center = window.innerWidth / 2;
 
-        <p>
-            Aging is the most risk factor for neurodegenerative disease, yet the knowledge about how it emerges across cells, tissues, and organ systems is still unknow. 
-            Our lab is driven by a central hypothesis: <strong>aging is a spatially organized and systemically coordinated process, shaped by dynamic communication between cells.</strong> 
-            We propose that aging is not simply the accumulation of molecular damage within individual cells, but rather an emergent property of structured communication across cells, 
-            tissues, and organ systems. Understanding aging therefore requires identifying the rules and intercellular signaling by which information is transmitted, integrated, 
-            and acted upon across biological space.
-        </p>
+    items.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const itemCenter = rect.left + rect.width / 2;
 
-        <p>
-            Our work has contributed to this emerging paradigm by uncovering previously unrecognized modes of communication in the aging brain. We demonstrated that heat shock proteins (HSPs) can 
-            function as transferable signals, transmitted from aged neurons to glial cells via extracellular vesicles to modulate brain aging (<em>Nature Neuroscience</em>, 2025). 
-            We identified a role for the ion channel TMC1 in delaying neuronal aging through extrasynaptic GABA signaling (<em>Science Advances</em>, 2022). 
-            Together, these findings point to a model in which molecular information is actively propagated across cells and tissues to shape aging outcomes.
-        </p>
+        let distance = Math.abs(center - itemCenter);
 
-        <p>
-            Building on this foundation, the <strong>Spatial Aging Biology & Disease Lab</strong> seeks to establish a new research direction at the interface of aging biology, 
-            neuroscience, and systems biology. Our goal is to define the principles of spatial aging biology: how cellular identity, spatial context, 
-            and inter-tissue communication jointly determine aging trajectories and disease vulnerability.
-        </p>
+        let scale = 1.4 - distance / 600;
+        scale = Math.max(0.7, scale);
 
-        <p>
-           To achieve this, we integrate proximity labeling-based cell- and tissue-specific proteomics, multi-omics profiling, 
-            and large-scale genetic screening with rigorous molecular, biochemical, and computational approaches. Using complementary model systems, including <em>C. elegans</em>, 
-            mouse models, and organoids, we seek to uncover conserved mechanisms of nervous system aging from Spatial Aging Biology perspective.
-        </p>
-    </section>
-</div>
+        el.style.transform = `scale(${scale})`;
+        el.style.zIndex = Math.floor(scale * 10);
+        el.style.opacity = scale < 0.8 ? 0.6 : 1;
+    });
+}
+
+container.addEventListener("scroll", update);
+window.addEventListener("resize", update);
+update();
+</script>
 
 </body>
 </html>
