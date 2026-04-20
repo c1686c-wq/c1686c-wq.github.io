@@ -113,6 +113,7 @@ body {
     margin: 0;
     font-weight: 500;
 }
+
 /* ================= PHOTO STRIP (新增核心) ================= */
 .photo-strip-wrapper {
     width: 100%;
@@ -124,7 +125,7 @@ body {
 .photo-strip {
     display: flex;
     width: max-content;
-    animation: scrollStrip 35s linear infinite;
+    animation: scrollStrip 60s linear infinite;
 }
 
 .photo-strip img {
