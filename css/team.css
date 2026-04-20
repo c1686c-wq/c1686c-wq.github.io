@@ -1,7 +1,6 @@
 /* ================= GLOBAL ================= */
 :root {
     --title: #3E3A35;
-    --nav: #6B5E4A;
     --quote: #8B7D6B;
     --accent: #B85C1A;
 }
@@ -29,38 +28,32 @@ body {
     overflow: hidden;
 }
 
-/* ================= 高级渐变遮罩（重点） ================= */
-.sub-hero::before {
+.sub-hero::before,
+.sub-hero::after {
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 1;
+}
 
-    /* ⭐中心清晰 + 边缘渐暗 */
+.sub-hero::before {
     background: radial-gradient(
         circle at center,
         rgba(240,242,245,0.05) 0%,
         rgba(240,242,245,0.08) 70%,
         rgba(240,242,245,0.18) 100%
     );
-
-    z-index: 1;
 }
 
-/* ================= 再加一层“边缘暗角（更高级）” ================= */
 .sub-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-
     background: radial-gradient(
         ellipse at center,
         rgba(0,0,0,0.00) 90%,
         rgba(0,0,0,0.20) 100%
     );
-
-    z-index: 2;
 }
 
+/* ================= NAV ================= */
 .navbar {
     position: absolute;
     top: 25px;
@@ -75,11 +68,10 @@ body {
 
 .nav-right a {
     text-decoration: none;
-    color: #6B5E4A;
+    color: var(--nav);
     font-size: 16px;
     font-weight: 600;
-    display: inline-block;
-    transition: color 0.25s ease, transform 0.25s ease;
+    transition: 0.25s;
 }
 
 .nav-right a:hover {
@@ -92,6 +84,7 @@ body {
     font-weight: 700;
 }
 
+/* ================= HERO TEXT ================= */
 .sub-hero-text {
     position: relative;
     z-index: 3;
@@ -101,14 +94,15 @@ body {
 .sub-hero-text h1 {
     font-size: 42px;
     font-weight: 700;
-    color: #3E3A35;
+    color: var(--title);
     margin: 0 0 10px;
 }
 
 .sub-hero-text h1 span {
     color: inherit;
 }
-/* =================================== CONTENT ============================= */
+
+/* ================= CONTENT ================= */
 .team-intro {
     max-width: 900px;
     margin: 15px auto 45px;
@@ -116,8 +110,6 @@ body {
     font-size: 1.15rem;
     line-height: 1.8;
     color: #111;
-    font-style: normal;
-    font-weight: 400;
 }
 
 .team-container {
@@ -133,7 +125,7 @@ body {
     padding-left: 14px;
 }
 
-/* ================= ROW ================= */
+/* ================= MEMBER ================= */
 .member-row {
     display: flex;
     align-items: center;
@@ -141,7 +133,6 @@ body {
     margin-bottom: 45px;
 }
 
-/* ================= PHOTO ================= */
 .photo-frame {
     width: 220px;
     height: 260px;
@@ -152,29 +143,24 @@ body {
     flex-shrink: 0;
 }
 
-/* ================= TEXT ================= */
 .member-info h3 {
     font-size: 26px;
     margin-bottom: 8px;
 }
 
-.member-info span {
+.member-info > span {
     display: block;
     color: var(--accent);
     margin-bottom: 12px;
 }
 
-.contact-line .indent {
-    display: inline-block;
-    color: var(--quote);
-}
-
-.member-info p {
+.member-info p:not(.contact-line) {
     color: var(--quote);
     line-height: 1.8;
     max-width: 700px;
 }
 
+/* ================= CONTACT ================= */
 .contact-line {
     color: var(--quote);
     line-height: 1.8;
@@ -182,15 +168,16 @@ body {
 }
 
 .contact-line strong {
-    color: var(--quote);
     font-weight: 600;
+    color: var(--quote);
 }
 
-.indent {
-    display: inline-block;
-    margin-left: 50px;
+.contact-line .indent {
+    display: block;
+    margin-left: 52px;
     color: var(--quote);
 }
+
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
     .member-row {
@@ -199,6 +186,7 @@ body {
     }
 }
 
+/* ================= EMAIL ================= */
 .email-link {
     color: #2F5D8C;
     text-decoration: none;
@@ -209,4 +197,3 @@ body {
     color: #1E466B;
     text-decoration: underline;
 }
-
