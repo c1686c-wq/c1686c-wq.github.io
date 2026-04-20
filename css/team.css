@@ -75,12 +75,21 @@ body {
 
 .nav-right a {
     text-decoration: none;
-    color: #F8F8FF;
+    color: #6B5E4A;
+    font-size: 16px;
     font-weight: 600;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-right a:hover {
+    color: #A63D1E;
+    transform: scale(1.08);
 }
 
 .nav-right a.active {
     color: var(--accent);
+    font-weight: 700;
 }
 
 .sub-hero-text {
