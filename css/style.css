@@ -61,16 +61,16 @@ body {
 }
 
 .logo-img {
-    height: 80px;
+    height: 64px;
 }
 
 .logo-line1 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
 }
 
 .logo-line2 {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--quote);
 }
 
