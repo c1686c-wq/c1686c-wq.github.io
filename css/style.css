@@ -140,16 +140,14 @@ body {
 }
 
 .photo-strip img {
-    width: 20vw;          /* 一屏大约显示5张 */
-    min-width: 220px;
-    height: 220px;
+    width: clamp(160px, 18vw, 260px);
+    height: clamp(140px, 16vw, 220px);
     object-fit: cover;
     margin-right: 18px;
-    border-radius: 0;     /* 去掉圆角 */
+    border-radius: 0;
     transition: transform 0.4s ease;
     flex-shrink: 0;
 }
-
 /* 鼠标放上去停止滚动 */
 .photo-strip:hover {
     animation-play-state: paused;
