@@ -43,14 +43,12 @@
             <h1>Spatial Aging Biology & Disease</h1>
         </div>
 
-        <!-- ================= COVER FLOW STRIP ================= -->
+        <!-- ================= AUTO FLOW STRIP ================= -->
         <div class="photo-strip-wrapper">
             <div class="photo-strip" id="flow">
-
                 <video autoplay muted loop playsinline>
                     <source src="./home/home_1.mp4">
                 </video>
-
                 <img src="./home/home_2.jpg">
                 <img src="./home/home_3.jpg">
                 <img src="./home/home_4.jpg">
@@ -58,10 +56,20 @@
                 <img src="./home/home_6.jpg">
                 <img src="./home/home_7.jpg">
                 <img src="./home/home_8.jpg">
-
+                
+                <!-- duplicate for infinite loop -->
+                <video autoplay muted loop playsinline>
+                   <source src="./home/home_1.mp4">
+                </video>
+                <img src="./home/home_2.jpg">
+                <img src="./home/home_3.jpg">
+                <img src="./home/home_4.jpg">
+                <img src="./home/home_5.jpg">
+                <img src="./home/home_6.jpg">
+                <img src="./home/home_7.jpg">
+                <img src="./home/home_8.jpg">
             </div>
         </div>
-
         <!-- SCROLL -->
         <div class="scroll-down">
             <div class="circle">
@@ -72,33 +80,26 @@
     </div>
 </div>
 
-<!-- ================= JS (核心 cover flow) ================= -->
+<!-- ================= JS (轻量增强：中间放大感) ================= -->
 <script>
 const container = document.getElementById("flow");
 const items = container.querySelectorAll("img, video");
-
 function update() {
     const center = window.innerWidth / 2;
-
     items.forEach(el => {
         const rect = el.getBoundingClientRect();
         const itemCenter = rect.left + rect.width / 2;
-
         let distance = Math.abs(center - itemCenter);
-
-        let scale = 1.4 - distance / 600;
-        scale = Math.max(0.7, scale);
-
+        let scale = 1.35 - distance / 700;
+        scale = Math.max(0.75, scale);
         el.style.transform = `scale(${scale})`;
         el.style.zIndex = Math.floor(scale * 10);
-        el.style.opacity = scale < 0.8 ? 0.6 : 1;
+        el.style.opacity = scale < 0.85 ? 0.6 : 1;
     });
 }
-
-container.addEventListener("scroll", update);
+container.addEventListener("mousemove", update);
 window.addEventListener("resize", update);
 update();
 </script>
-
 </body>
 </html>
