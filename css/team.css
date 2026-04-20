@@ -99,7 +99,7 @@ body {
 .sub-hero-text h1 span {
     color: inherit;
 }
-/* ================= CONTENT ================= */
+/* =================================== CONTENT ============================= */
 .team-intro {
     max-width: 900px;
     margin: 15px auto 45px;
@@ -161,6 +161,22 @@ body {
     max-width: 700px;
 }
 
+.contact-line {
+    color: var(--quote);
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.contact-line strong {
+    color: var(--quote);
+    font-weight: 600;
+}
+
+.indent {
+    display: inline-block;
+    margin-left: 50px;
+    color: var(--quote);
+}
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
     .member-row {
@@ -179,3 +195,4 @@ body {
     color: #1E466B;
     text-decoration: underline;
 }
+
