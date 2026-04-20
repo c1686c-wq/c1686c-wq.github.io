@@ -87,18 +87,28 @@ const items = container.querySelectorAll("img, video");
 
 let isPaused = false;
 
-function update() {
-    if (isPaused) return;
+/* ⭐ 自动滚动（关键） */
+let offset = 0;
 
+function autoMove() {
+    if (!isPaused) {
+        offset -= 0.5; // 速度（可调慢/快）
+        container.style.transform = `translateX(${offset}px)`;
+    }
+    requestAnimationFrame(autoMove);
+}
+
+/* ⭐ 中间放大逻辑 */
+function updateScale() {
     const center = window.innerWidth / 2;
 
     items.forEach(el => {
         const rect = el.getBoundingClientRect();
         const itemCenter = rect.left + rect.width / 2;
 
-        const distance = Math.abs(center - itemCenter);
+        let distance = Math.abs(center - itemCenter);
 
-        let scale = 1.45 - distance / 650;
+        let scale = 1.5 - distance / 700;
         scale = Math.max(0.7, scale);
 
         el.style.transform = `scale(${scale})`;
@@ -107,21 +117,23 @@ function update() {
     });
 }
 
-/* 鼠标进入 → 停止动态 */
+/* ⭐ hover控制 */
 container.addEventListener("mouseenter", () => {
     isPaused = true;
 });
 
-/* 鼠标离开 → 恢复动态 */
 container.addEventListener("mouseleave", () => {
     isPaused = false;
 });
 
-/* 实时更新（鼠标移动更丝滑） */
-container.addEventListener("mousemove", update);
-window.addEventListener("resize", update);
+/* ⭐ 实时更新 */
+function loop() {
+    updateScale();
+    requestAnimationFrame(loop);
+}
 
-update();
+autoMove();
+loop();
 </script>
 <!-- ================= CONTENT ================= -->
 <div class="content">
