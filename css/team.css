@@ -22,7 +22,7 @@ body {
     position: relative;
     height: 35vh;
     min-height: 280px;
-    background: url("../team/team_pic.jpg") center 40% / cover no-repeat;
+    background: url("../team/team_pic.jpg") center 10% / cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
