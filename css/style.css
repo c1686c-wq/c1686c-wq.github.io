@@ -114,42 +114,50 @@ body {
     font-weight: 500;
 }
 /* ================= PHOTO STRIP (新增核心) ================= */
-
 .photo-strip-wrapper {
-    position: absolute;
-    bottom: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 92%;              /* 关键：6张可视宽度 */
-  overflow: hidden;
-    z-index: 4;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background: transparent;
 }
 
 .photo-strip {
     display: flex;
-    gap: 14px;
     width: max-content;
-    animation: scrollLoop 28s linear infinite;
+    animation: scrollStrip 35s linear infinite;
 }
 
 .photo-strip img {
-    width: calc(92vw / 6 - 14px);
-    height: 120px;
+    width: 20vw;          /* 一屏大约显示5张 */
+    min-width: 220px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 14px;
+    margin-right: 18px;
+    border-radius: 0;     /* 去掉圆角 */
+    transition: transform 0.4s ease;
     flex-shrink: 0;
 }
 
-/* 无限滚动 */
-@keyframes scrollLoop {
-    0% {
+/* 鼠标放上去停止滚动 */
+.photo-strip:hover {
+    animation-play-state: paused;
+}
+
+/* 单张图片放大 */
+.photo-strip img:hover {
+    transform: scale(1.4);
+    z-index: 10;
+    position: relative;
+}
+
+@keyframes scrollStrip {
+    from {
         transform: translateX(0);
     }
-    100% {
+    to {
         transform: translateX(-50%);
     }
 }
-
 /* ================= SCROLL ================= */
 .scroll-down {
     position: absolute;
