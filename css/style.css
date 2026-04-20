@@ -22,6 +22,7 @@ body {
     height: 100vh;
     position: relative;
     background: url("../home/home.png") center/cover no-repeat;
+    z-index: 0;
 }
 
 /* overlay */
@@ -58,6 +59,7 @@ body {
     display: flex;
     gap: 14px;
     align-items: center;
+     z-index: 1000;
 }
 
 .logo-img {
@@ -81,7 +83,7 @@ body {
     right: 40px;
     display: flex;
     gap: 22px;
-    z-index: 101;
+    z-index: 1000;
 }
 
 .top-right a {
@@ -98,7 +100,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 3;
+     z-index: 1000;
 }
 
 .lab-title {
@@ -126,8 +128,9 @@ body {
 .photo-strip {
     display: flex;
     gap: 20px;
-  width: max-content;
-    animation: scrollLeft 60s linear infinite;
+    padding: 0 10vw;
+    width: max-content;
+    overflow: hidden;
 }
 /* items统一尺寸 */
 
@@ -137,7 +140,7 @@ body {
     height: 220px;
     object-fit: cover;
     flex-shrink: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 /* hover 停止 + 放大 */
