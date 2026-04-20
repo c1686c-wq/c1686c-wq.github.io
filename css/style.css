@@ -12,18 +12,19 @@
 
 body {
     margin: 0;
-    background: #ffffff;
     font-family: Arial, sans-serif;
+    background: #fff;
     color: var(--title);
 }
 
 /* ================= HERO ================= */
 .hero {
     height: 100vh;
-    background: url("../home/home.png") center/cover no-repeat;
     position: relative;
+    background: url("../home/home.png") center/cover no-repeat;
 }
 
+/* overlay */
 .overlay {
     position: absolute;
     inset: 0;
@@ -34,69 +35,63 @@ body {
     );
 }
 
-.logo-block {
-    position: fixed;
-    top: 22px;
-    left: 35px;
-    z-index: 101;
-}
-.logo-img {
-   height: clamp(70px, 6vw, 100px);
-    width: auto;
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-}
-
-.logo-line1 {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--nav);
-}
-
-.logo-line2 {
-    font-size: 18px;
-    color: var(--quote);
-}
-
-/* ================= NAVBAR ================= */
-.top-right {
-    position: fixed;
-    top: 34px;
-    right: 40px;
-    display: flex;
-    gap: 28px;
-    z-index: 101;
-}
-.top-right a {
-    text-decoration: none;
-    color: var(--nav);
-    font-size: 17px;
-    font-weight: 600;
-    transition: 0.25s;
-}
-
-.top-right a:hover {
-    color: #A63D1E;
-}
-/* ================= 顶部玻璃条 ================= */
+/* ================= GLASS NAV ================= */
 .top-glass-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 92px;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255,255,255,0.18);
+    height: 64px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.10);
     z-index: 100;
 }
 
-/* ================= HERO CENTER ================= */
+/* ================= LOGO ================= */
+.logo-block {
+    position: fixed;
+    top: 14px;
+    left: 35px;
+    z-index: 101;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.logo-img {
+    height: 80px;
+}
+
+.logo-line1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.logo-line2 {
+    font-size: 14px;
+    color: var(--quote);
+}
+
+/* ================= NAV ================= */
+.top-right {
+    position: fixed;
+    top: 18px;
+    right: 40px;
+    display: flex;
+    gap: 22px;
+    z-index: 101;
+}
+
+.top-right a {
+    text-decoration: none;
+    color: var(--nav);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ================= CENTER ================= */
 .hero-center {
     position: absolute;
     top: 38%;
@@ -104,70 +99,57 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 3;
-    width: 100%;
 }
 
 .lab-title {
     font-size: 90px;
     font-weight: 700;
-    color: #433F3B;
     letter-spacing: 6px;
-    margin-bottom: 12px;
 }
 
 .hero-center h1 {
-    font-size: 20px;
-    color: #433F3B;
-    margin: 0;
-    font-weight: 500;
+    font-size: 18px;
 }
 
-/* ================= PHOTO STRIP (新增核心) ================= */
+/* ================= COVER FLOW ================= */
 .photo-strip-wrapper {
     position: absolute;
-    bottom: clamp(80px, 8vh, 120px);     /* 在scroll上方 */
-    left: 0;
+    bottom: clamp(80px, 8vh, 120px);
     width: 100%;
     overflow: hidden;
-    padding: 10px 0;
     z-index: 4;
 }
 
 .photo-strip {
     display: flex;
-    width: max-content;
-    animation: scrollStrip 60s linear infinite;
+    gap: 20px;
+    padding: 0 10vw;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 
-.photo-strip img {
-    width: clamp(160px, 18vw, 260px);
-    height: clamp(140px, 16vw, 220px);
+/* items */
+.photo-strip img,
+.photo-strip video {
+    width: 240px;
+    height: 220px;
     object-fit: cover;
-    margin-right: 18px;
-    border-radius: 0;
-    transition: transform 0.4s ease;
     flex-shrink: 0;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
-/* 鼠标放上去停止滚动 */
+
+/* hover pause + zoom */
 .photo-strip:hover {
-    animation-play-state: paused;
+    cursor: grab;
 }
 
-/* 单张图片放大 */
-.photo-strip img:hover {
+.photo-strip img:hover,
+.photo-strip video:hover {
     transform: scale(1.4);
-    z-index: 10;
-    position: relative;
 }
 
-@keyframes scrollStrip {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
 /* ================= SCROLL ================= */
 .scroll-down {
     position: absolute;
@@ -189,33 +171,4 @@ body {
 
 .arrow {
     font-size: 20px;
-    color: var(--nav);
-}
-
-/* ================= CONTENT ================= */
-.content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 80px 20px;
-}
-
-.home-img {
-    display: block;
-    width: 100%;
-    max-width: 1150px;
-    height: auto;
-    margin: 20px auto 50px;
-    border-radius: 14px;
-}
-
-h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.about p {
-    line-height: 1.9;
-    color: var(--quote);
-    text-align: justify;
-    margin-bottom: 24px;
 }
