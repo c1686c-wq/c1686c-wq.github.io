@@ -109,3 +109,35 @@ body {
     color: #8B7D6B;
     margin: 0;
 }
+
+/* ================= Content ================= */
+.resources {
+    margin-top: 70px;
+}
+
+.resource-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: start;
+    padding: 10px 0;
+}
+
+.resource-name {
+    font-weight: 600;
+    color: var(--title);
+    text-align: left;
+}
+
+.resource-link {
+    text-align: left;
+}
+
+.resource-link a {
+    color: #5d7896;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.resource-link a:hover {
+    text-decoration: underline;
+}
