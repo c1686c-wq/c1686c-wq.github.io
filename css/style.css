@@ -75,12 +75,13 @@ body {
 }
 
 .logo-line1 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
 }
 
 .logo-line2 {
     font-size: 18px;
+    font-weight: 700;
     color: var(--quote);
 }
 
@@ -127,18 +128,12 @@ body {
     bottom: clamp(80px, 8vh, 120px);
     left: 0;
     width: 100%;
-    overflow: hidden;
-    z-index: 4;
-}
-
-/* 改成 scroll 而不是 transform 动画 */
-.photo-strip-wrapper {
-    position: absolute;
-    bottom: clamp(80px, 8vh, 120px);
-    left: 0;
-    width: 100%;
-    overflow-x: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
     z-index: 10;
+}
+.photo-strip-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .photo-strip {
@@ -158,7 +153,9 @@ body {
 
 .photo-strip img:hover,
 .photo-strip video:hover {
-    transform: scale(1.08);
+    transform: scale(1.22);
+    z-index: 20;
+    position: relative;
 }
 /* ================= SCROLL ================= */
 .scroll-down {
