@@ -222,6 +222,8 @@ h2 {
 p {
     line-height: 1.8;
     color: var(--quote);
+    text-align: justify;
+}
 }
 
 /* ================= CARDS ================= */
