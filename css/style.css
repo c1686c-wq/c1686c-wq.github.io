@@ -75,7 +75,7 @@ body {
 }
 
 .logo-line1 {
-    font-size: 17px;
+    font-size: 16.5px;
     font-weight: 500;
 }
 
@@ -85,6 +85,11 @@ body {
     color: var(--quote);
 }
 
+.logo-text {  /*logo两行间距*/
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
 /* ================= NAV ================= */
 .top-right {
     position: fixed;
@@ -128,9 +133,11 @@ body {
     bottom: clamp(80px, 8vh, 120px);
     left: 0;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: scroll;/*x轴能放大*/
+    overflow-y: visible;/*y轴也能放大*/
     scrollbar-width: none;
     z-index: 10;
+    padding: 30px 0;/*给hover预留空间*/
 }
 .photo-strip-wrapper::-webkit-scrollbar {
     display: none;
@@ -138,7 +145,7 @@ body {
 
 .photo-strip {
     display: flex;
-    gap: 20px;
+    gap: 10px;       /*图片间距*/
     width: max-content;
 }
 
@@ -153,7 +160,7 @@ body {
 
 .photo-strip img:hover,
 .photo-strip video:hover {
-    transform: scale(1.22);
+    transform: scale(1.35);     /*放大程度*/
     z-index: 20;
     position: relative;
 }
