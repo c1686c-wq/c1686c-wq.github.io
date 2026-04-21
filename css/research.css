@@ -79,7 +79,7 @@ body {
 /* ================= NAVBAR ================= */
 .navbar {
     position: fixed;
-    top: 18px;
+    top: 25px;
     right: 40px;
     z-index: 1000;
 }
@@ -91,14 +91,15 @@ body {
 
 .nav-right a {
     text-decoration: none;
-    color: var(--nav);
+    color: #F8F8FF;
     font-size: 16px;
     font-weight: 600;
-    transition: 0.25s;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .nav-right a:hover {
-    color: #A63D1E;
+    color: #F8F8FF;
     transform: scale(1.08);
 }
 
