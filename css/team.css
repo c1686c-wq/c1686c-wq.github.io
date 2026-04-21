@@ -22,7 +22,7 @@ body {
     position: relative;
     height: var(--hero-h, 50vh);
     min-height: 280px;
-    background: url("../team/team_pic.png") center 15% / cover no-repeat;
+    background: url("../team/team_pic.png") center 28% / cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,10 +99,10 @@ body {
     height: 58px;
 
     background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 
     z-index: 1000;
     pointer-events: none;
