@@ -102,14 +102,14 @@ body {
 .top-right a {
     text-decoration: none;
     color: var(--nav);
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     display: inline-block;
     transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .top-right a:hover {
-    color: var(--accent);
+    color: #A63D1E;
     transform: scale(1.08);
 }
 .top-right a.active {
@@ -140,7 +140,7 @@ body {
 /* ================= PHOTO STRIP (AUTO LOOP) ================= */
 .photo-strip-wrapper {
     position: absolute;
-    bottom: clamp(80px, 8vh, 120px);
+    bottom: clamp(50px, 8vh, 90px);
     left: 0;
     width: 100%;
     overflow-x: scroll;/*x轴能放大*/
