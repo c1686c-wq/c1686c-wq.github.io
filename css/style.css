@@ -21,7 +21,7 @@ body {
 .hero {
     height: 100vh;
     position: relative;
-    background: url("../home/bg.pdf") center/cover no-repeat;
+    background: url("../home/bg.png") center/cover no-repeat;
     z-index: 0;
 }
 
