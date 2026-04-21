@@ -55,7 +55,7 @@
                 <img src="./home/home_5.png">
                 <img src="./home/home_6.png">
                 <img src="./home/home_7.jpg">
-                <img src="./home/home_8.tif">
+                <img src="./home/home_8.png">
                 
                 <!-- duplicate for infinite loop -->
                 <video autoplay muted loop playsinline>
@@ -67,7 +67,7 @@
                 <img src="./home/home_5.png">
                 <img src="./home/home_6.png">
                 <img src="./home/home_7.jpg">
-                <img src="./home/home_8.tif">
+                <img src="./home/home_8.png">
             </div>
         </div>
         <!-- SCROLL -->
@@ -82,36 +82,59 @@
 
 <!-- ================= JS (轻量增强：中间放大感) ================= -->
 <script>
-const container = document.getElementById("flow");
+const strip = document.getElementById("flow");
+const wrapper = document.getElementById("wrapper");
 
-let offset = 0;
+let speed = 1;
 let paused = false;
 
-/* 修改⑤：仅控制滚动，不再控制缩放 */
-function autoMove() {
+/* ⭐ 自动滚动（用 scrollLeft，不再碰 transform） */
+function autoScroll() {
     if (!paused) {
-        offset -= 0.5;
-        container.style.transform = `translateX(${offset}px)`;
+        strip.scrollLeft += speed;
 
-        if (Math.abs(offset) >= container.scrollWidth / 2) {
-            offset = 0;
+        /* 无限循环 */
+        if (strip.scrollLeft >= strip.scrollWidth / 2) {
+            strip.scrollLeft = 0;
         }
     }
-
-    requestAnimationFrame(autoMove);
+    requestAnimationFrame(autoScroll);
 }
 
-/* 修改⑥：鼠标进入暂停 */
-container.addEventListener("mouseenter", () => {
+/* ⭐ hover 停止 */
+wrapper.addEventListener("mouseenter", () => {
     paused = true;
 });
 
-/* 修改⑦：鼠标离开继续 */
-container.addEventListener("mouseleave", () => {
+/* ⭐ 离开继续 */
+wrapper.addEventListener("mouseleave", () => {
     paused = false;
 });
 
-autoMove();
+/* ⭐ 中心高亮（恢复你丢掉的效果） */
+function updateCenter() {
+    const center = wrapper.getBoundingClientRect().left + wrapper.offsetWidth / 2;
+
+    const items = strip.querySelectorAll("img, video");
+
+    items.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const itemCenter = rect.left + rect.width / 2;
+
+        const dist = Math.abs(center - itemCenter);
+
+        if (dist < 120) {
+            el.classList.add("active");
+        } else {
+            el.classList.remove("active");
+        }
+    });
+
+    requestAnimationFrame(updateCenter);
+}
+
+autoScroll();
+updateCenter();
 </script>
 <!-- ================= CONTENT ================= -->
 <div class="content">
