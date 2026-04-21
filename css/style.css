@@ -134,25 +134,27 @@ body {
 }
 
 /* items统一尺寸 */
-
 .photo-strip img,
 .photo-strip video {
     width: 240px;
     height: 220px;
     object-fit: cover;
     flex-shrink: 0;
-    transition: transform 0.2s ease;
+    transition: transform 0.35s ease;
+    transform-origin: center center;
+    filter: brightness(1);
 }
 
-/* hover 停止 + 放大 */
-.photo-strip:hover {
+/* 鼠标进入整个区域 → 停止滚动 */
+.photo-strip-wrapper:hover .photo-strip {
     animation-play-state: paused;
 }
+/* 鼠标悬停单张图 → 放大 */
 .photo-strip img:hover,
 .photo-strip video:hover {
-    transform: scale(1.4);
-    z-index: 10;
+    transform: scale(1.25);
     position: relative;
+    z-index: 20;
 }
 
 /* 无限滚动动画 */
