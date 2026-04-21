@@ -120,5 +120,24 @@
 
 </div>
 
+<script>
+const hero = document.querySelector(".sub-hero");
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    // 控制区间（可以自己调）
+    const maxScroll = 300; // 滚动多少开始完全收缩
+    const minH = 33;       // 最小 vh
+    const maxH = 50;       // 最大 vh
+
+    let progress = Math.min(scrollY / maxScroll, 1);
+
+    let currentH = maxH - (maxH - minH) * progress;
+
+    hero.style.setProperty("--hero-h", currentH + "vh");
+});
+</script>
+    
 </body>
 </html>
