@@ -29,14 +29,19 @@ body {
 .overlay {
     position: absolute;
     inset: 0;
-    z-index: 1;
-    pointer-events: none; /* ⭐关键：不再干扰上层 */
+    z-index: 2;
     background: linear-gradient(
         rgba(240,242,245,0.55),
         rgba(240,242,245,0.82)
     );
 }
-
+.logo-block,
+.top-right,
+.hero-center,
+.photo-strip-wrapper {
+    position: relative;
+    z-index: 10;
+}
 /* ================= GLASS NAV ================= */
 /* ：bar不挡按钮 */
 .top-glass-bar {
@@ -127,19 +132,21 @@ body {
 }
 
 /* 改成 scroll 而不是 transform 动画 */
+.photo-strip-wrapper {
+    position: absolute;
+    bottom: clamp(80px, 8vh, 120px);
+    left: 0;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 10;
+}
+
 .photo-strip {
     display: flex;
     gap: 20px;
     width: max-content;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    scrollbar-width: none;
-}
-.photo-strip::-webkit-scrollbar {
-    display: none;
 }
 
-/* 图片基础状态 */
 .photo-strip img,
 .photo-strip video {
     width: 240px;
@@ -147,28 +154,12 @@ body {
     object-fit: cover;
     flex-shrink: 0;
     transition: transform 0.35s ease;
-    filter: brightness(1);
 }
 
-/* hover 放大 */
 .photo-strip img:hover,
 .photo-strip video:hover {
-    transform: scale(1.25);
-    z-index: 10;
-    position: relative;
+    transform: scale(1.08);
 }
-
-/* ⭐中间放大效果（CSS版） */
-.photo-strip img,
-.photo-strip video {
-    transform: scale(0.9);
-}
-
-.photo-strip img.active,
-.photo-strip video.active {
-    transform: scale(1.2);
-}
-
 /* ================= SCROLL ================= */
 .scroll-down {
     position: absolute;
