@@ -3,6 +3,7 @@
     --title: #3E3A35;
     --quote: #8B7D6B;
     --accent: #B85C1A;
+     --nav: #2F2433; 
 }
 
 * {
@@ -56,10 +57,10 @@ body {
 
 /* ================= NAV ================= */
 .navbar {
-    position: absolute;
-    top: 25px;
+    position: fixed;
+    top: 18px;
     right: 40px;
-    z-index: 3;
+    z-index: 1000;
 }
 
 .nav-right {
@@ -85,10 +86,31 @@ body {
     font-weight: 700;
 }
 
+.navbar,
+.nav-right {
+    z-index: 1100;
+}
+
+.top-glass-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+
+    z-index: 1000;
+    pointer-events: none;
+}
 /* ================= HERO TEXT ================= */
 .sub-hero-text {
     position: relative;
-    z-index: 3;
+    z-index: 5;
     text-align: center;
 }
 
