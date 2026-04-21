@@ -38,6 +38,7 @@ body {
 }
 
 /* ================= GLASS NAV ================= */
+/* ：bar不挡按钮 */
 .top-glass-bar {
     position: fixed;
     top: 0;
@@ -48,7 +49,8 @@ body {
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    z-index: 50;
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* ================= LOGO ================= */
@@ -68,7 +70,7 @@ body {
 }
 
 .logo-line1 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -114,15 +116,13 @@ body {
     font-size: 18px;
 }
 
-
-
 /* ================= PHOTO STRIP (AUTO LOOP) ================= */
 .photo-strip-wrapper {
     position: absolute;
     bottom: clamp(80px, 8vh, 120px);
     left: 0;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;   /* 允许放大不被裁剪 */
     z-index: 4;
 }
 
@@ -133,7 +133,7 @@ body {
     will-change: transform;
 }
 
-/* items统一尺寸 */
+/* 修改③：图片始终正常亮度 */
 .photo-strip img,
 .photo-strip video {
     width: 240px;
@@ -141,30 +141,16 @@ body {
     object-fit: cover;
     flex-shrink: 0;
     transition: transform 0.35s ease;
-    transform-origin: center center;
+    transform-origin: center;
     filter: brightness(1);
 }
 
-/* 鼠标进入整个区域 → 停止滚动 */
-.photo-strip-wrapper:hover .photo-strip {
-    animation-play-state: paused;
-}
-/* 鼠标悬停单张图 → 放大 */
+/* 修改④：hover单张放大 */
 .photo-strip img:hover,
 .photo-strip video:hover {
-    transform: scale(1.25);
-    position: relative;
+    transform: scale(1.22);
     z-index: 20;
-}
-
-/* 无限滚动动画 */
-@keyframes scrollLeft {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+    position: relative;
 }
 
 /* ================= SCROLL ================= */
