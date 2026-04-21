@@ -77,5 +77,29 @@
 
 </div>
 
+<script>
+const hero = document.querySelector(".sub-hero");
+
+function updateHero() {
+    const scrollY = window.scrollY;
+
+    const maxScroll = 300; // 滚动多少到最小
+    const maxH = 50;
+    const minH = 33;
+
+    let progress = Math.min(scrollY / maxScroll, 1);
+
+    let height = maxH - (maxH - minH) * progress;
+
+    hero.style.setProperty("--hero-h", height + "vh");
+}
+
+// 初始化（关键！！！）
+updateHero();
+
+// 滚动监听
+window.addEventListener("scroll", updateHero);
+</script>
+ 
 </body>
 </html>
