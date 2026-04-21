@@ -90,56 +90,29 @@
 const strip = document.getElementById("flow");
 const wrapper = document.getElementById("wrapper");
 
-let speed = 1;
+let speed = 0.5;
 let paused = false;
 
-/* ⭐ 自动滚动（用 scrollLeft，不再碰 transform） */
 function autoScroll() {
     if (!paused) {
-        strip.scrollLeft += speed;
+        wrapper.scrollLeft += speed;
 
-        /* 无限循环 */
-        if (strip.scrollLeft >= strip.scrollWidth / 2) {
-            strip.scrollLeft = 0;
+        if (wrapper.scrollLeft >= strip.scrollWidth / 2) {
+            wrapper.scrollLeft = 0;
         }
     }
     requestAnimationFrame(autoScroll);
 }
 
-/* ⭐ hover 停止 */
 wrapper.addEventListener("mouseenter", () => {
     paused = true;
 });
 
-/* ⭐ 离开继续 */
 wrapper.addEventListener("mouseleave", () => {
     paused = false;
 });
 
-/* ⭐ 中心高亮（恢复你丢掉的效果） */
-function updateCenter() {
-    const center = wrapper.getBoundingClientRect().left + wrapper.offsetWidth / 2;
-
-    const items = strip.querySelectorAll("img, video");
-
-    items.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const itemCenter = rect.left + rect.width / 2;
-
-        const dist = Math.abs(center - itemCenter);
-
-        if (dist < 120) {
-            el.classList.add("active");
-        } else {
-            el.classList.remove("active");
-        }
-    });
-
-    requestAnimationFrame(updateCenter);
-}
-
 autoScroll();
-updateCenter();
 </script>
 <!-- ================= CONTENT ================= -->
 <div class="content">
