@@ -91,6 +91,14 @@ body {
     gap: 3px;
 }
 /* ================= NAV ================= */
+.top-right {
+    position: fixed;
+    top: 18px;
+    right: 40px;
+    display: flex;
+    gap: 22px;
+    z-index: 1000;
+}
 .top-right a {
     text-decoration: none;
     color: var(--nav);
@@ -225,7 +233,6 @@ p {
     line-height: 1.8;
     color: var(--quote);
     text-align: justify;
-}
 }
 
 /* ================= CARDS ================= */
