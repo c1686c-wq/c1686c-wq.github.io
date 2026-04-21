@@ -122,18 +122,24 @@ body {
     bottom: clamp(80px, 8vh, 120px);
     left: 0;
     width: 100%;
-    overflow: visible;   /* 允许放大不被裁剪 */
+    overflow: hidden;
     z-index: 4;
 }
 
+/* 改成 scroll 而不是 transform 动画 */
 .photo-strip {
     display: flex;
     gap: 20px;
     width: max-content;
-    will-change: transform;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+}
+.photo-strip::-webkit-scrollbar {
+    display: none;
 }
 
-/* 修改③：图片始终正常亮度 */
+/* 图片基础状态 */
 .photo-strip img,
 .photo-strip video {
     width: 240px;
@@ -141,16 +147,26 @@ body {
     object-fit: cover;
     flex-shrink: 0;
     transition: transform 0.35s ease;
-    transform-origin: center;
     filter: brightness(1);
 }
 
-/* 修改④：hover单张放大 */
+/* hover 放大 */
 .photo-strip img:hover,
 .photo-strip video:hover {
-    transform: scale(1.22);
-    z-index: 20;
+    transform: scale(1.25);
+    z-index: 10;
     position: relative;
+}
+
+/* ⭐中间放大效果（CSS版） */
+.photo-strip img,
+.photo-strip video {
+    transform: scale(0.9);
+}
+
+.photo-strip img.active,
+.photo-strip video.active {
+    transform: scale(1.2);
 }
 
 /* ================= SCROLL ================= */
