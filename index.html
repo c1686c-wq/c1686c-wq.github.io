@@ -83,57 +83,35 @@
 <!-- ================= JS (轻量增强：中间放大感) ================= -->
 <script>
 const container = document.getElementById("flow");
-const items = container.querySelectorAll("img, video");
 
-let isPaused = false;
-
-/* ⭐ 自动滚动（关键） */
 let offset = 0;
+let paused = false;
 
+/* 修改⑤：仅控制滚动，不再控制缩放 */
 function autoMove() {
-    if (!isPaused) {
-        offset -= 0.5; // 速度（可调慢/快）
+    if (!paused) {
+        offset -= 0.5;
         container.style.transform = `translateX(${offset}px)`;
+
+        if (Math.abs(offset) >= container.scrollWidth / 2) {
+            offset = 0;
+        }
     }
+
     requestAnimationFrame(autoMove);
 }
 
-/* ⭐ 中间放大逻辑 */
-function updateScale() {
-    const center = window.innerWidth / 2;
-
-    items.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const itemCenter = rect.left + rect.width / 2;
-
-        let distance = Math.abs(center - itemCenter);
-
-        let scale = 1.5 - distance / 700;
-        scale = Math.max(0.7, scale);
-
-        el.style.transform = `scale(${scale})`;
-        el.style.zIndex = Math.floor(scale * 10);
-        el.style.opacity = scale < 0.8 ? 0.5 : 1;
-    });
-}
-
-/* ⭐ hover控制 */
+/* 修改⑥：鼠标进入暂停 */
 container.addEventListener("mouseenter", () => {
-    isPaused = true;
+    paused = true;
 });
 
+/* 修改⑦：鼠标离开继续 */
 container.addEventListener("mouseleave", () => {
-    isPaused = false;
+    paused = false;
 });
-
-/* ⭐ 实时更新 */
-function loop() {
-    updateScale();
-    requestAnimationFrame(loop);
-}
 
 autoMove();
-loop();
 </script>
 <!-- ================= CONTENT ================= -->
 <div class="content">
