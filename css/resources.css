@@ -191,13 +191,13 @@ body {
 }
 
 .resource-right img {
-    width: 300px; /*图片大小*/
-    height: 300px;
+    width: 64px; /*图片大小*/
+    height: 64px;
     object-fit: contain;
     opacity: 0.9;
     transition: transform 0.3s ease;
 }
 
 .resource-item:hover .resource-right img {
-    transform: scale(1.08);
+    transform: scale(1.85);
 }
