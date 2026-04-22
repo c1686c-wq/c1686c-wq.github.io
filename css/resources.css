@@ -63,7 +63,7 @@ body {
     position: absolute;
     top: 25px;
     right: 40px;
-    z-index: 3;
+    z-index: 1100;
 }
 
 .nav-right {
@@ -73,11 +73,23 @@ body {
 
 .nav-right a {
     text-decoration: none;
-    color: #6B5E4A;
+    color:  #F8F8FF;
     font-size: 16px;
     font-weight: 600;
     display: inline-block;
     transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/*正文的时候bar转黑字*/
+.navbar.scrolled .nav-right a {
+    color: #3E3A35;
+}
+.navbar.scrolled .nav-right a.active {
+    color: #B85C1A;
+}
+.top-glass-bar.scrolled {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
 }
 
 .nav-right a:hover {
@@ -101,7 +113,7 @@ body {
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    z-index: 1;
+    z-index: 1000;
     pointer-events: none;
 }
 /* ================= CENTER TEXT ================= */
@@ -172,13 +184,15 @@ body {
 }
 
 .resource-right {
-    text-align: right;
-    min-width: 80px;
+    width: 130px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .resource-right img {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     object-fit: contain;
     opacity: 0.9;
     transition: transform 0.3s ease;
