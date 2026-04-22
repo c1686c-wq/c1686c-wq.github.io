@@ -73,23 +73,11 @@ body {
 
 .nav-right a {
     text-decoration: none;
-    color:  #F8F8FF;
+    color: #2F2433;
     font-size: 16px;
     font-weight: 600;
     display: inline-block;
     transition: color 0.25s ease, transform 0.25s ease;
-}
-
-/*正文的时候bar转黑字*/
-.navbar.scrolled .nav-right a {
-    color: #3E3A35;
-}
-.navbar.scrolled .nav-right a.active {
-    color: #B85C1A;
-}
-.top-glass-bar.scrolled {
-    background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(12px);
 }
 
 .nav-right a:hover {
