@@ -203,6 +203,8 @@
 
 <script>
 const hero = document.querySelector(".sub-hero");
+const navbar = document.querySelector(".navbar");
+const glassBar = document.querySelector(".top-glass-bar");
 
 function updateHero() {
     const scrollY = window.scrollY;
@@ -211,17 +213,21 @@ function updateHero() {
     const maxH = 50;
     const minH = 33;
 
-    let progress = Math.min(scrollY / maxScroll, 1);
-
-    let height = maxH - (maxH - minH) * progress;
+    const progress = Math.min(scrollY / maxScroll, 1);
+    const height = maxH - (maxH - minH) * progress;
 
     hero.style.setProperty("--hero-h", height + "vh");
+
+    if (scrollY > 180) {
+        navbar.classList.add("scrolled");
+        if (glassBar) glassBar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+        if (glassBar) glassBar.classList.remove("scrolled");
+    }
 }
 
-// 初始化
 updateHero();
-
-// scroll监听
 window.addEventListener("scroll", updateHero);
 </script>
 
