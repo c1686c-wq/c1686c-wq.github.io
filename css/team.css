@@ -148,24 +148,23 @@ body {
     padding-left: 14px;
 }
 
-/* ================= MEMBER ================= */
+/* ============================= MEMBER =============================== */
 .member-row {
     display: flex;
     align-items: center;
     gap: 50px;
     margin-bottom: 45px;
+    overflow: visible;   /* NEW */
 }
 
-.photo-frame {
-    width: 220px;
-    height: 260px;
-    border-radius: 18px;
-    border: 2px solid #ddd;
-    background: linear-gradient(145deg, #fafafa, #f0f0f0);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    flex-shrink: 0;
+.member-info {
+    transition: transform 0.45s ease;
 }
 
+
+.member-row:hover .member-info {
+    transform: translateX(110px);
+}
 .member-info h3 {
     font-size: 26px;
     margin-bottom: 8px;
@@ -181,6 +180,63 @@ body {
     color: var(--quote);
     line-height: 1.8;
     max-width: 700px;
+}
+
+
+/* ================================CHANGED: 原来的 .photo-frame 删除--改成抽拉式照片堆叠=============================== */
+.photo-stack {
+    position: relative;
+    width: 260px;     /* CHANGED: 比原来宽一点 */
+    height: 260px;
+    flex-shrink: 0;
+}
+
+.stack-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid #ddd;
+    background: #fff;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    transition: transform 0.45s ease;
+}
+
+/* ======NEW: 默认像扑克牌露边角===== */
+.photo1 {
+    z-index: 4;
+    transform: translateX(0) rotate(0deg);
+}
+
+.photo2 {
+    z-index: 3;
+    transform: translateX(10px) rotate(-3deg);
+}
+
+.photo3 {
+    z-index: 2;
+    transform: translateX(20px) rotate(2deg);
+}
+
+.photo4 {
+    z-index: 1;
+    transform: translateX(30px) rotate(-4deg);
+}
+
+/* ======== NEW: hover 展开======= */
+.member-row:hover .photo2 {
+    transform: translateX(70px) rotate(-2deg);
+}
+
+.member-row:hover .photo3 {
+    transform: translateX(140px) rotate(2deg);
+}
+
+.member-row:hover .photo4 {
+    transform: translateX(210px) rotate(-3deg);
 }
 
 /* ================= CONTACT ================= */
