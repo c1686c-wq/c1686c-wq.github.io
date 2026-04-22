@@ -16,7 +16,7 @@ body {
     height: var(--hero-h, 50vh);
     min-height: 280px;
 
-    background: url("../join_pic.jpg") center/cover no-repeat;
+    background: url("../join_pic.jpg") center 60% / cover no-repeat;
 
     display: flex;
     justify-content: center;
@@ -63,7 +63,7 @@ body {
     position: absolute;
     top: 25px;
     right: 40px;
-    z-index: 3;
+    z-index: 1100;
 }
 
 .nav-right {
@@ -101,7 +101,7 @@ body {
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    z-index: 1;
+    z-index: 1000;
     pointer-events: none;
 }
 /* ================= CENTER TEXT ================= */
