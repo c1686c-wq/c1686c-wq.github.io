@@ -13,7 +13,7 @@ body {
 /* ================= UNIVERSAL SUBPAGE HERO ================= */
 .sub-hero {
     position: relative;
-    height: var(--hero-h, 50vh);
+    height: var(--hero-h, 50vh); 
     min-height: 280px;
 
     background: url("../bg.png") center/cover no-repeat;
