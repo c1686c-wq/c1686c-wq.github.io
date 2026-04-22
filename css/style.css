@@ -61,7 +61,7 @@ body {
 /* ================= LOGO ================= */
 .logo-block {
     position: fixed;
-    top: 14px;
+    top: 12px;
     left: 35px;
     z-index: 101;
     display: flex;
@@ -77,7 +77,7 @@ body {
 .logo-line1 {
     font-size: 18px;
     font-weight: 700;
-    color: #6a015e;
+    color:#a4864e;
 }
 
 .logo-line2 {
