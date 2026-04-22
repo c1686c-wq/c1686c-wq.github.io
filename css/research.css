@@ -99,12 +99,12 @@ body {
 }
 
 .nav-right a:hover {
-    color: #F8F8FF;
+    color: #B85C1A;
     transform: scale(1.08);
 }
 
 .nav-right a.active {
-    color: var(--accent);
+    color: #B85C1A;
     font-weight: 700;
 }
 
