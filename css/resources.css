@@ -173,25 +173,17 @@ body {
 
 .resource-right {
     text-align: right;
-    min-width: 130px;
+    min-width: 80px;
 }
 
-.resource-right span {
-    display: block;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #8B7D6B;
-    margin-bottom: 8px;
+.resource-right img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
 }
 
-.resource-right a {
-    text-decoration: none;
-    color: #B85C1A;
-    font-weight: 600;
-    transition: opacity 0.25s ease;
-}
-
-.resource-right a:hover {
-    opacity: 0.7;
+.resource-item:hover .resource-right img {
+    transform: scale(1.08);
 }
