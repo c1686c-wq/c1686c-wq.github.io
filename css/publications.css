@@ -82,6 +82,7 @@ body {
     position: absolute;
     top: 25px;
     right: 40px;
+    z-index: 1100;
 }
 
 .nav-right {
@@ -109,10 +110,6 @@ body {
     font-weight: 700;
 }
 
-.navbar,
-.nav-right {
-    z-index: 1100;
-}
 .top-glass-bar {
     position: fixed;
     top: 0;
