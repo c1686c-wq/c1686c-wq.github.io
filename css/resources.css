@@ -199,5 +199,5 @@ body {
 }
 
 .resource-item:hover .resource-right img {
-    transform: scale(1.85);
+    transform: scale(10);
 }
