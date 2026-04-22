@@ -189,6 +189,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-right: 20px; /* 👈 往左挪一点（关键） */
 }
 
 .resource-right img {
@@ -201,5 +202,5 @@ body {
 }
 
 .resource-item:hover .resource-right img {
-    transform: scale(1.05);
+    transform: scale(2.5); /*悬停图片视觉效果*/
 }
