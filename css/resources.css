@@ -196,7 +196,7 @@ body {
     height: 64px;
     object-fit: contain;
     opacity: 0.9;
-    transform: scale(1.5);
+    transform: scale(2.2);/*图片视觉效果*/
     transition: transform 0.3s ease;
 }
 
