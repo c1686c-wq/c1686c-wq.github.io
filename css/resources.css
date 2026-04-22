@@ -185,7 +185,7 @@ body {
 }
 
 .resource-right {
-    width: 130px; /*右侧预留空间*/    
+    width: 200px; /*右侧预留空间*/    
     display: flex;
     justify-content: flex-end;
     align-items: center;
