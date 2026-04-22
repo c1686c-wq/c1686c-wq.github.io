@@ -13,7 +13,7 @@ body {
 /* ================= UNIVERSAL SUBPAGE HERO ================= */
 .sub-hero {
     position: relative;
-    height: 35vh;
+    height: var(--hero-h, 50vh);
     min-height: 280px;
 
     background: url("../moments_pic2.png") center/cover no-repeat;
@@ -23,6 +23,7 @@ body {
     align-items: center;
 
     overflow: hidden;
+    transition: height 0.15s linear;
 }
 
 /* ================= 高级渐变遮罩（重点） ================= */
@@ -91,6 +92,19 @@ body {
     font-weight: 700;
 }
 
+.top-glass-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    z-index: 1;
+    pointer-events: none;
+}
 /* ================= CENTER TEXT ================= */
 .sub-hero-text {
     position: relative;
