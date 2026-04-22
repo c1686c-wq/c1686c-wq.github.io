@@ -191,8 +191,8 @@ body {
 }
 
 .resource-right img {
-    width: 80px; /*图片大小*/
-    height: 80px;
+    width: 300px; /*图片大小*/
+    height: 300px;
     object-fit: contain;
     opacity: 0.9;
     transition: transform 0.3s ease;
