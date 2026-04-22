@@ -160,11 +160,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 80px;          /* 稍微拉开 */
+    margin: 0 auto;     
 }
 
 /* =========================== LEFT MAP =========================== */
 .join-left {
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,7 +184,7 @@ body {
 /* =========================== RIGHT CONTENT =========================== */
 .join-right {
     text-align: left;
-    flex: 1;
+    max-width: 380px;  
 }
 
 .join-right h2 {
