@@ -9,8 +9,8 @@
 <body>
 
 <!-- ===== HERO ===== -->
-<div class="sub-hero">
-
+<div class="top-glass-bar"></div>
+    <div class="sub-hero">
     <div class="navbar">
         <div class="nav-right">
             <a href="team.html">Team</a>
@@ -73,18 +73,17 @@ function updateHero() {
     const maxH = 50;
     const minH = 33;
 
-    let progress = Math.min(scrollY / maxScroll, 1);
-    let height = maxH - (maxH - minH) * progress;
+    const progress = Math.min(scrollY / maxScroll, 1);
+    const height = maxH - (maxH - minH) * progress;
 
     hero.style.setProperty("--hero-h", height + "vh");
 
-    // ⭐ 同时切换导航和玻璃条
     if (scrollY > 180) {
         navbar.classList.add("scrolled");
-        glassBar.classList.add("scrolled");
+        if (glassBar) glassBar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
-        glassBar.classList.remove("scrolled");
+        if (glassBar) glassBar.classList.remove("scrolled");
     }
 }
 
