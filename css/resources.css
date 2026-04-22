@@ -16,7 +16,7 @@ body {
     height: var(--hero-h, 50vh); 
     min-height: 280px;
 
-    background: url("../bg.png") center/cover no-repeat;
+    background: url("../resources/resources_pic.png") center/cover no-repeat;
 
     display: flex;
     justify-content: center;
