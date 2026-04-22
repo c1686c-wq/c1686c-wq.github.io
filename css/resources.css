@@ -189,7 +189,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 20px; /* 👈 往左挪一点（关键） */
+    padding-right: 40px; /* 👈 往左挪一点（关键） */
 }
 
 .resource-right img {
@@ -197,10 +197,10 @@ body {
     height: 64px;
     object-fit: contain;
     opacity: 0.9;
-    transform: scale(2.2);/*图片视觉效果*/
+    transform: scale(3);/*图片视觉效果*/
     transition: transform 0.3s ease;
 }
 
 .resource-item:hover .resource-right img {
-    transform: scale(2.5); /*悬停图片视觉效果*/
+    transform: scale(4); /*悬停图片视觉效果*/
 }
