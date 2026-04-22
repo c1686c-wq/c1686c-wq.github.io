@@ -184,15 +184,15 @@ body {
 }
 
 .resource-right {
-    width: 130px;
+    width: 130px; /*右侧预留空间*/    
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
 .resource-right img {
-    width: 64px;
-    height: 64px;
+    width: 80px; /*图片大小*/
+    height: 80px;
     object-fit: contain;
     opacity: 0.9;
     transition: transform 0.3s ease;
