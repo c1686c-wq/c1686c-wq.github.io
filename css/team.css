@@ -161,9 +161,6 @@ body {
     transition: transform 0.45s ease;
 }
 
-.member-row:hover .member-info { /*文字区域右移距离*/
-    transform: translateX(700px);
-}
 .member-info h3 {
     font-size: 26px;
     margin-bottom: 8px;
@@ -185,9 +182,10 @@ body {
 /* ================================CHANGED: 原来的 .photo-frame 删除--改成抽拉式照片堆叠=============================== */
 .photo-stack {        /*修改容器宽度*/
     position: relative;
-    width: 920px;     /* CHANGED: 比原来宽一点 */
+    width: 220px;     /* CHANGED: 比原来宽一点 */
     height: 260px;
     flex-shrink: 0;
+    overflow: visible; /* NEW */
 }
 
 .stack-photo {
@@ -226,18 +224,21 @@ body {
 }
 
 /* ======== NEW: hover 展开程度，需要搭配photo-stack-width 和 member-row:hover .member-info-teansforme======= */
-.member-row:hover .photo2 {
+.photo-stack:hover .photo2 {
     transform: translateX(220px) rotate(-2deg);
 }
 
-.member-row:hover .photo3 {
+.photo-stack:hover .photo3 {
     transform: translateX(440px) rotate(2deg);
 }
 
-.member-row:hover .photo4 {
+.photo-stack:hover .photo4 {
     transform: translateX(660px) rotate(-3deg);
 }
 
+.photo-stack:hover + .member-info { /*文字区域右移距离*/
+    transform: translateX(700px);
+}
 /* ================= CONTACT ================= */
 .contact-line {
     color: var(--quote);
