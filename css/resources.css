@@ -125,45 +125,73 @@ body {
 }
 
 /* ================= Content ================= */
-.resources {
-    margin-top: 70px;
+.resources-container {
+    max-width: 980px;
+    margin: auto;
+    padding: 80px 24px;
 }
 
-.resource-row {
-    display: grid;
-    grid-template-columns: 220px minmax(0, 1fr);
-    align-items: start;
-    padding: 12px 14px;
-    border-radius: 10px;
-    transition: background 0.25s ease;
-    column-gap: 20px;
+.resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding: 28px 32px;
+    margin-bottom: 22px;
+
+    background: rgba(248,248,250,0.95);
+    border-radius: 22px;
+
+    box-shadow:
+        0 6px 24px rgba(0,0,0,0.04),
+        0 1px 2px rgba(0,0,0,0.03);
+
+    transition: all 0.3s ease;
 }
 
-.resource-row:hover {
-    background: rgba(87, 14, 82, 0.03);
+.resource-item:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.08),
+        0 2px 6px rgba(0,0,0,0.04);
 }
 
-.resource-name {
-    font-weight: 600;
-    color: var(--title);
-    text-align: left;
+.resource-left h3 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    color: #2F2F2F;
+    font-weight: 700;
 }
 
-.resource-link {
-    text-align: left;
-    min-width: 0;
+.resource-left p {
+    margin: 0;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
 }
-.resource-link a {
-    color: #5d7896;
+
+.resource-right {
+    text-align: right;
+    min-width: 130px;
+}
+
+.resource-right span {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8B7D6B;
+    margin-bottom: 8px;
+}
+
+.resource-right a {
     text-decoration: none;
-    word-break: break-word;
-    overflow-wrap: anywhere;
-    transition: color 0.25s ease;
+    color: #B85C1A;
+    font-weight: 600;
+    transition: opacity 0.25s ease;
 }
 
-.resource-row:hover .resource-link a {
-    color: var(--accent);
-}
-.resource-link a:hover {
-    text-decoration: underline;
+.resource-right a:hover {
+    opacity: 0.7;
 }
