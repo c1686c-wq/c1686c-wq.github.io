@@ -160,7 +160,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 70px;          /* 稍微拉开 */
+    gap: 88px;          /* 稍微拉开间距 */
     margin: 0 auto;     
 }
 
