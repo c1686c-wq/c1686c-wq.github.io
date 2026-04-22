@@ -151,6 +151,7 @@ body {
 
     padding: 28px 32px;
     margin-bottom: 22px;
+    overflow: visible;   /*让图片放大被可视化*/
 
     background: rgba(248,248,250,0.95);
     border-radius: 22px;
@@ -199,5 +200,5 @@ body {
 }
 
 .resource-item:hover .resource-right img {
-    transform: scale(10);
+    transform: scale(1.5);
 }
