@@ -129,13 +129,14 @@ body {
 }
 
 .lab-title {
-    font-size: 100px;
+    font-size: 80px;
     font-weight: 700;
     letter-spacing: 6px;
 }
 
 .hero-center h1 {
     font-size: 20px;
+    font-weight: 500;
 }
 
 /* ================= PHOTO STRIP (AUTO LOOP) ================= */
