@@ -276,3 +276,41 @@ body {
     color: #1E466B;
     text-decoration: underline;
 }
+
+/* ================= LAB ALUMNI GALLERY ================= */
+.alumni-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.alumni-item {
+    text-align: center;
+}
+
+.alumni-item img {
+    width: min(820px, 90%);
+    height: auto;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+    transition: transform 0.35s ease;
+}
+
+.alumni-item img:hover {
+    transform: scale(1.02);
+}
+
+.alumni-caption {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--title);
+}
+
+.alumni-names {
+    margin-top: 8px;
+    font-size: 15px;
+    color: var(--quote);
+    line-height: 1.7;
+}
