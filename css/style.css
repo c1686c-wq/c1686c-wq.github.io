@@ -61,7 +61,7 @@ body {
 /* ================= LOGO ================= */
 .logo-block {
     position: fixed;
-    top: 5px;
+    top: 8px;
     left: 35px;
     z-index: 101;
     display: flex;
@@ -78,10 +78,11 @@ body {
     font-size: 18px;
     font-weight: 700;
     color:#a4864e;
+    position: relative;
+    top: -2px;
 }
 
 .logo-line2 {
-
     font-size: 16.5px;
     font-weight: 500;
 }
@@ -89,7 +90,7 @@ body {
 .logo-text {  /*logo两行间距*/
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 5px;
 }
 /* ================= NAV ================= */
 .top-right {
