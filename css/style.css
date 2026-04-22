@@ -61,7 +61,7 @@ body {
 /* ================= LOGO ================= */
 .logo-block {
     position: fixed;
-    top: 12px;
+    top: 5px;
     left: 35px;
     z-index: 101;
     display: flex;
