@@ -58,7 +58,7 @@ body {
 /* ================= NAV ================= */
 .navbar {
     position: fixed;
-    top: 18px;
+    top: 25px;
     right: 40px;
     z-index: 1000;
 }
@@ -96,7 +96,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 52px;
+    height: 60px;
 
     background: rgba(255,255,255,0.06);
     backdrop-filter: blur(1px);
