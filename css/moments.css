@@ -186,7 +186,7 @@ body {
 
 /*照片位置*/
 .img-2604-inj {
-    transform: translateY(0, 20px);/*水平，垂直*/
+    transform: translateY(0, 500px);/*水平，垂直*/
 }
 .img-2602-meeting {
     transform: translateY(0, 20px);/*水平，垂直*/
