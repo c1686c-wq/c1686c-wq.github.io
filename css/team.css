@@ -198,7 +198,7 @@ body {
     border-radius: 18px;
     border: 2px solid #ddd;
     background: #fff;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    box-shadow: 0 0px 0px rgba(0,0,0,0.12); /*阴影边框0*/
     transition: transform 0.45s ease;
 }
 
