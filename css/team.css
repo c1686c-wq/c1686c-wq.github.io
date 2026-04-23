@@ -210,17 +210,17 @@ body {
 
 .photo2 {
     z-index: 3;
-    transform: translateX(5px) rotate(-3deg);
+    transform: translateX(0px) rotate(0deg);
 }
 
 .photo3 {
     z-index: 2;
-    transform: translateX(10px) rotate(2deg);
+    transform: translateX(0px) rotate(0deg);
 }
 
 .photo4 {
     z-index: 1;
-    transform: translateX(15px) rotate(-4deg);
+    transform: translateX(0px) rotate(0deg);
 }
 
 /* ======== NEW: hover 展开程度，需要搭配photo-stack-width 和 member-row:hover .member-info-teansforme======= */
