@@ -183,3 +183,12 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/*照片位置*/
+.img-2604-inj {
+    transform: translateY(0, 5px);/*水平，垂直*/
+}
+.img-2602-meeting {
+    transform: translateY(0, 5px);/*水平，垂直*/
+}
+
