@@ -12,7 +12,7 @@ body {
 
 /* ================= UNIVERSAL SUBPAGE HERO ================= */
 .sub-hero {
-    position: relative;
+    position: relative; 
     height: var(--hero-h, 50vh); 
     min-height: 280px;
 
