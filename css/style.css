@@ -83,7 +83,7 @@ body {
     top: 25px;
     right: 40px;
     display: flex;
-    gap: 22px;
+    gap: 24px;
     z-index: 1000;
 }
 .top-right a {
