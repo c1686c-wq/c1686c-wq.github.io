@@ -197,3 +197,16 @@ body {
     line-height: 1.8;
     color: #333;
 }
+/* =========================== top left logo =========================== */
+.wu-logo {
+    position: fixed;
+    top: 10px;
+    left: 28px;
+    z-index: 1200;
+}
+
+.wu-logo img {
+    height: 38px;
+    width: auto;
+    display: block;
+}
