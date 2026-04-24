@@ -200,13 +200,13 @@ body {
 /* =========================== top left logo =========================== */
 .wu-logo {
     position: fixed;
-    top: 10px;
+    top: 6px;
     left: 28px;
     z-index: 1200;
 }
 
 .wu-logo img {
-    height: 60px;
+    height: 55px;
     width: auto;
     display: block;
 }
