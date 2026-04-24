@@ -176,7 +176,7 @@ body {
 .join-left img {
     width: 400px;
     height: 400px;
-    border: 3px;
+    border: 10px;
     border-radius: 12px;
     object-fit: cover;
 }
