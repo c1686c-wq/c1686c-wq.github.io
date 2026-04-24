@@ -200,7 +200,7 @@ body {
 /* =========================== top left logo =========================== */
 .wu-logo {
     position: fixed;
-    top: 6px;
+    top: 3px;
     left: 28px;
     z-index: 1200;
 }
