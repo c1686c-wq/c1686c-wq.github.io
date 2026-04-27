@@ -191,9 +191,6 @@ body {
     transform: none !important;
     border-radius: 18px;
 }
-.pi-photo:hover + .member-info {
-    transform: none;
-}
 
 /* ================================CHANGED: 原来的 .photo-frame 删除--改成抽拉式照片堆叠=============================== */
 .photo-stack {        /*修改容器宽度*/
@@ -255,6 +252,10 @@ body {
 .photo-stack:hover + .member-info { /*文字区域右移距离*/
     transform: translateX(700px);
 }
+.pi-photo:hover + .member-info { /*PI部分文字区域不右移*/
+    transform: none;
+}
+
 /* ================= CONTACT ================= */
 .contact-line {
     color: var(--quote);
@@ -329,4 +330,18 @@ body {
     font-size: 15px;
     color: var(--quote);
     line-height: 1.7;
+}
+
+/* =========================== top left logo =========================== */
+.wu-logo {
+    position: fixed;
+    top: 3px;
+    left: 28px;
+    z-index: 1200;
+}
+
+.wu-logo img {
+    height: 60px;
+    width: auto;
+    display: block;
 }
