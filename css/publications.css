@@ -198,3 +198,17 @@ body {
 .title:hover {
     opacity: 0.7;
 }
+
+/* =========================== top left logo =========================== */
+.wu-logo {
+    position: fixed;
+    top: 3px;
+    left: 28px;
+    z-index: 1200;
+}
+
+.wu-logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
