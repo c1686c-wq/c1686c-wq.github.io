@@ -144,7 +144,7 @@ body {
 /* ================= PHOTO STRIP (AUTO LOOP) ================= */
 .photo-strip-wrapper {
     position: absolute;
-    bottom: clamp(50px, 8vh, 90px);
+    bottom: clamp(30px, 8vh, 70px); /*控制整体上下位置*/
     left: 0;
     width: 100%;
     overflow-x: scroll;/*x轴能放大*/
