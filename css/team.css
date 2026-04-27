@@ -129,8 +129,8 @@ body {
 .hero-svg {
     position: absolute;
     top: 60px;    /* 上下位置 */
-    right: 360px; /* 左右位置 */
-    width: 300px;  /* 横向变宽 + 放大 */
+    right: 380px; /* 左右位置 */
+    width: 330px;  /* 横向变宽 + 放大 */
     height: auto; /* 保持比例（防止变形） */
     z-index: 3;
     pointer-events: none;
