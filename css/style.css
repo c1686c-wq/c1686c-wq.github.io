@@ -31,8 +31,8 @@ body {
     inset: 0;
     z-index: 2;
     background: linear-gradient(
-        rgba(240,242,245,0.55),
-        rgba(240,242,245,0.82)
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0.32)
     );
 }
 .logo-block,
@@ -143,9 +143,9 @@ body {
 /* ================= neuron-glia svg ================= */
 .hero-svg {
     position: absolute;
-    top: 70px;    /* 上下位置 */
-    right: 100px; /* 左右位置 */
-    width: 260px;  /* 横向变宽 + 放大 */
+    top: 160px;    /* 上下位置 */
+    right: 400px; /* 左右位置 */
+    width: 400px;  /* 横向变宽 + 放大 */
     height: auto; /* 保持比例（防止变形） */
     z-index: 3;
     pointer-events: none;
