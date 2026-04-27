@@ -177,7 +177,7 @@ body {
     width: 400px;
     height: 400px;
     border: 2px solid rgba(0,0,0,0.25);   /* 黑色边框 */
-    border-radius: 12px;
+    border-radius: 0px; /* 直角 */
     object-fit: cover;
 }
 
