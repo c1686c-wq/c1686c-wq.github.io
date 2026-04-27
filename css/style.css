@@ -143,10 +143,10 @@ body {
 /* ================= neuron-glia svg ================= */
 .hero-svg {
     position: absolute;
-    top: 70px;
-    right: 100px;
-    width: 260px;
-    height: 260px;
+    top: 70px;    /* 上下位置 */
+    right: 100px; /* 左右位置 */
+    width: 260px;  /* 横向变宽 + 放大 */
+    height: auto; /* 保持比例（防止变形） */
     z-index: 3;
     pointer-events: none;
 }
@@ -154,8 +154,10 @@ body {
 .hero-svg img {
     width: 100%;
     height: 100%;
-    opacity: 0.4;
+    opacity: 0.65;
+    filter: drop-shadow(0 0 10px rgba(87,14,82,0.2));
 }
+
 /* ================= PHOTO STRIP (AUTO LOOP) ================= */
 .photo-strip-wrapper {
     position: absolute;
