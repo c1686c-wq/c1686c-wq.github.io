@@ -143,9 +143,9 @@ body {
 /* ================= neuron-glia svg ================= */
 .hero-svg {
     position: absolute;
-    top: 200px;    /* 上下位置 */
+    top: 180px;    /* 上下位置 */
     right: 470px; /* 左右位置 */
-    width: 1200px;  /* 横向变宽 + 放大 */
+    width: 800px;  /* 横向变宽 + 放大 */
     height: auto; /* 保持比例（防止变形） */
     z-index: 3;
     pointer-events: none;
