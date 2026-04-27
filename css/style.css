@@ -178,6 +178,7 @@ body {
     z-index: 20;
     position: relative;
 }
+
 /* ================= SCROLL ================= */
 .scroll-down {
     position: absolute;
@@ -200,6 +201,7 @@ body {
 .arrow {
     font-size: 23px;
 }
+
 /* ================= CONTENT ================= */
 .content {
     max-width: 1200px;
