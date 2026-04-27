@@ -144,7 +144,7 @@ body {
 .hero-svg {
     position: absolute;
     top: 150px;    /* 上下位置 */
-    right: 410px; /* 左右位置 */
+    right: 380px; /* 左右位置 */
     width: 700px;  /* 横向变宽 + 放大 */
     height: auto; /* 保持比例（防止变形） */
     z-index: 3;
