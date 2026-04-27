@@ -178,6 +178,22 @@ body {
     max-width: 700px;
 }
 
+/* ================= PI single photo ‼️================= */
+.pi-photo {
+    width: 220px;
+    height: 260px;
+}
+
+.pi-photo .stack-photo {
+    position: relative;
+    width: 220px;
+    height: 260px;
+    transform: none !important;
+    border-radius: 18px;
+}
+.pi-photo:hover + .member-info {
+    transform: none;
+}
 
 /* ================================CHANGED: 原来的 .photo-frame 删除--改成抽拉式照片堆叠=============================== */
 .photo-stack {        /*修改容器宽度*/
