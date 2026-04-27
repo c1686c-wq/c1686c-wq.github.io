@@ -107,6 +107,7 @@ body {
     z-index: 1000;
     pointer-events: none;
 }
+
 /* ================= HERO TEXT ================= */
 .sub-hero-text {
     position: relative;
@@ -123,6 +124,26 @@ body {
 
 .sub-hero-text h1 span {
     color: inherit;
+}
+/* ================= neuron-glia svg ================= */
+.hero-svg {
+    position: absolute;
+    top: 30px;    /* 上下位置 */
+    right: 200px; /* 左右位置 */
+    width: 200px;  /* 横向变宽 + 放大 */
+    height: auto; /* 保持比例（防止变形） */
+    z-index: 3;
+    pointer-events: none;
+}
+
+.hero-svg img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    filter: 
+        brightness(0.35) 
+        contrast(1.1) /*轻微增强层次*/
+        drop-shadow(0 0 6px rgba(0,0,0,0.12));/*居中发光+轻微模糊边+颜色*/
 }
 
 /* ================= CONTENT ================= */
