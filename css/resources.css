@@ -192,3 +192,17 @@ body {
 .resource-item:hover .resource-right img {
     transform: scale(3.4); /*悬停图片视觉效果*/
 }
+
+/* =========================== top left logo =========================== */
+.wu-logo {
+    position: fixed;
+    top: 3px;
+    left: 28px;
+    z-index: 1200;
+}
+
+.wu-logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
