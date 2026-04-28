@@ -124,7 +124,7 @@ body {
 .hero-center {
     position: absolute;
     top: 38%;
-    left: clamp(38%, 42vw, 46%);
+    left: clamp(22%, 42vw, 40%);
     transform: translate(-50%, -50%);
     text-align: center;
      z-index: 1000;
