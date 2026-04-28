@@ -124,7 +124,7 @@ body {
 .hero-center {
     position: absolute;
     top: 38%;
-    left: 50%;
+    left: clamp(38%, 42vw, 46%);
     transform: translate(-50%, -50%);
     text-align: center;
      z-index: 1000;
@@ -143,9 +143,9 @@ body {
 /* ================= neuron-glia svg ================= */
 .hero-svg {
     position: absolute;
-    top: 150px;    /* 上下位置 */
-    right: 380px; /* 左右位置 */
-    width: 700px;  /* 横向变宽 + 放大 */
+    bottom: clamp(180px, 22vh, 280px);   /* 上下位置 */
+    right: 12%; /* 左右位置 */
+    width: clamp(320px, 42vw, 760px); /* 横向变宽 + 放大 ,最小、屏幕宽度、最大*/
     height: auto; /* 保持比例（防止变形） */
     z-index: 3;
     pointer-events: none;
