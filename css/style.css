@@ -144,7 +144,7 @@ body {
     position: absolute;
     bottom: calc(clamp(5px, 8vh, 45px) + 260px);
     right: 12%; /* 左右 */
-    width: clamp(200px, 18vw, 300px); 
+    width: clamp(300px, 18vw, 400px); 
     height: auto; 
     z-index: 3;
     pointer-events: none;
