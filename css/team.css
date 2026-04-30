@@ -128,10 +128,10 @@ body {
 /* ================= neuron-glia svg ================= */
 .hero-svg {
     position: absolute;
-    top: 60px;    /* 上下位置 */
-    right: 380px; /* 左右位置 */
-    width: 330px;  /* 横向变宽 + 放大 */
-    height: auto; /* 保持比例（防止变形） */
+    top: clamp(30px, 8vh, 90px);
+    right: clamp(30px, 12vw, 380px);
+    width: clamp(160px, 24vw, 360px);
+    height: auto; 
     z-index: 3;
     pointer-events: none;
 }
@@ -213,13 +213,13 @@ body {
     border-radius: 18px;
 }
 
-/* ================================CHANGED: 原来的 .photo-frame 删除--改成抽拉式照片堆叠=============================== */
-.photo-stack {        /*修改容器宽度*/
+/* ================================抽拉照片=============================== */
+.photo-stack {        /*容器宽度*/
     position: relative;
-    width: 220px;     /* CHANGED: 比原来宽一点 */
+    width: 220px;     
     height: 260px;
     flex-shrink: 0;
-    overflow: visible; /* NEW */
+    overflow: visible; 
 }
 
 .stack-photo {
@@ -236,7 +236,7 @@ body {
     transition: transform 0.45s ease;
 }
 
-/* ======NEW: 默认像扑克牌露边角===== */
+/* ======NEW: 扑克牌边角===== */
 .photo1 {
     z-index: 4;
     transform: translateX(0) rotate(0deg);
@@ -257,7 +257,7 @@ body {
     transform: translateX(0px) rotate(0deg);
 }
 
-/* ======== NEW: hover 展开程度，需要搭配photo-stack-width 和 member-row:hover .member-info-teansforme======= */
+/* ======== NEW: hover 展开，+photo-stack-width 和 member-row:hover .member-info-teansforme======= */
 .photo-stack:hover .photo2 {
     transform: translateX(220px) rotate(-2deg);
 }
