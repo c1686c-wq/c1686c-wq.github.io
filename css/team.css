@@ -142,7 +142,7 @@ body {
     opacity: 1;
     filter:
         contrast(1.15)
-        saturate(1.5)
+        saturate(1)
         drop-shadow(0 0 0.7px rgba(0,0,0,0.10));
 }
 
