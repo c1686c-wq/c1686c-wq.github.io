@@ -129,7 +129,7 @@ body {
 .hero-svg {
     position: absolute;
     top: clamp(33px, 8vh, 93px);
-    right: clamp(400px, 12vw, 650px);
+    right: clamp(420px, 12vw, 670px);
     width: clamp(140px, 20vw, 260px);
     height: auto; 
     z-index: 3;
