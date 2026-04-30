@@ -130,7 +130,7 @@ body {
     position: absolute;
     top: clamp(33px, 8vh, 93px);
     right: clamp(420px, 12vw, 670px);
-    width: clamp(140px, 20vw, 260px);
+    width: clamp(145px, 20vw, 265px);
     height: auto; 
     z-index: 3;
     pointer-events: none;
@@ -141,9 +141,9 @@ body {
     height: 100%;
     opacity: 1;
     filter:
-        contrast(1.15)
+        contrast(1)
         saturate(1)
-        drop-shadow(0 0 0.7px rgba(0,0,0,0.10));
+        drop-shadow(0 0 0.4px rgba(0,0,0,0.10));
 }
 
 /* ================= CONTENT ================= */
