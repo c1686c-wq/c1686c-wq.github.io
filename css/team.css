@@ -210,9 +210,9 @@ body {
     height: 260px;
     object-fit: cover;
     border-radius: 18px;
-    border: 2px solid #ddd;
+    border: 0.5px solid #ddd;
     background: #fff;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.12); /*阴影边框0*/
+    box-shadow: 0 0px 0px rgba(0,0,0,0.05); /*阴影边框0*/
     transition: transform 0.45s ease;
 }
 
