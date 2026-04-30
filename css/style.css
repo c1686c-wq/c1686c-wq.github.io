@@ -123,7 +123,7 @@ body {
 .hero-center {
     position: absolute;
     top: 38%;
-    left: clamp(33%, 32vw, 38%);
+    left: clamp(38%, 32vw, 45%);
     transform: translate(-50%, -50%);
     text-align: center;
      z-index: 1000;
@@ -138,25 +138,6 @@ body {
 .hero-center h1 {
     font-size: 20px;
     font-weight: 500;
-}
-/* ================= neuron-glia svg ================= */
-.hero-svg {
-    position: absolute;
-    bottom: calc(clamp(5px, 8vh, 45px) + 248px);
-    right: 20%; 
-    width: clamp(300px, 18vw, 400px); 
-    height: auto; 
-    z-index: 3;
-    pointer-events: none;
-}
-
-.hero-svg img {
-    width: 100%;
-    height: auto;
-    opacity: 0.92;
-    filter:
-        contrast(1.08)
-        saturate(1.05);
 }
 
 /* ================= PHOTO STRIP (AUTO LOOP) ================= */
